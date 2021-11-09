@@ -5,6 +5,8 @@ def UlangLuas(panjang, lebar) :
     1. ya | 2. tidak
     3. Menghitung keliling dari panjang dan lebar yang sama? : sama
     4. Menghitung keliling dari panjang dan lebar yang baru? : baru 
+    5. Menghitung panjang dengan luas dan lebar yang baru? : panjang
+    6. Menghitung lebar dengan luas dan panjang yang baru? :lebar
     """)
         if ulang.casefold() == "ya" or ulang == "1":
             HitungLuasPersegiPanjang()
@@ -181,7 +183,7 @@ def Keliling() :
     elif Input_user == "2" or Input_user.casefold() == "lebar" :
         HitungLebardariKeliling()
     elif Input_user == "3" or Input_user.casefold() == "panjang" :
-        HitungPanjangdariLebar()
+        HitungPanjangdariKeliling()
     else :
         print("Harap memilih salah satu yang ada diatas!")
         keliling()
@@ -190,6 +192,17 @@ def UlangLebardariLuas() :
     print("test")
 
 def UlangPanjangdariLuas() :
-    print("test")
+    onoff = True
+    while onoff :
+        ulang = input("""\nApakah anda mau menghitung ulang lagi?
+    1. Ya | 2. tidak
+    3. Menghitung keliling dari panjang dan lebar yang sama? : sama
+    4. Menghitung keliling dari panjang dan lebar yang baru? : baru
+    5. Menghitung panjang dari keliling dan lebar yang baru? : panjang
+    6. Menghitung lebar dari keliling dan panjang yang baru? : lebar
+    """)
+    if ulang.casefold() == "ya" or ulang == "1" :
+        HitungPanjangDariLuas()
 
 PersegiPanjang()
+
