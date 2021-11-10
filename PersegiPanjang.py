@@ -115,7 +115,7 @@ def HitungPanjangDariLuas() :
             panjang = luas / lebar
             print("Panjang = luas / lebar\nPanjang = ", luas, " / ", lebar)
             print("Panjangnya adalah = ", panjang)
-            UlangPanjangdariLuas()
+            UlangPanjangdariLuas(panjang, lebar)
         else :
             print("\nLuas harus lebih besar dari lebar!")
             HitungPanjangDariLuas()
@@ -191,7 +191,7 @@ def Keliling() :
 def UlangLebardariLuas() :
     print("test")
 
-def UlangPanjangdariLuas() :
+def UlangPanjangdariLuas(panjang, lebar) :
     onoff = True
     while onoff :
         ulang = input("""\nApakah anda mau menghitung ulang lagi?
@@ -203,6 +203,11 @@ def UlangPanjangdariLuas() :
     """)
     if ulang.casefold() == "ya" or ulang == "1" :
         HitungPanjangDariLuas()
+    elif ulang.casefold() == "tidak" or ulang == "2" :
+        onoff = False
+        exit()
+    elif ulang.casefold() == "sama" or ulang == "3" :
+        HitungKelilingdariLuas(panjang, lebar)
 
 PersegiPanjang()
 
