@@ -6,8 +6,9 @@ def UlangLuas(panjang, lebar) :
     3. Menghitung keliling dari panjang dan lebar yang sama? : sama
     4. Menghitung keliling dari panjang dan lebar yang baru? : baru 
     5. Menghitung panjang dengan luas dan lebar yang baru? : panjang
-    6. Menghitung lebar dengan luas dan panjang yang baru? :lebar
-    7. Menghitung luas dengan satu yang berbeda? : satu
+    6. Menghitung lebar dengan luas dan panjang yang baru? : lebar
+    7. Menghitung luas dengan satu yang berbeda? : luas
+    8. Menghitung keliling dengan satu yang berbeda? : keliling
     """)
         if ulang.casefold() == "ya" or ulang == "1":
             HitungLuasPersegiPanjang()
@@ -24,8 +25,10 @@ def UlangLuas(panjang, lebar) :
             HitungPanjangDariLuas()
         elif ulang.casefold() == "lebar" or ulang == "6":
             HitungLebardariLuas()
-        elif ulang.casefold(). == "satu" or ulang == "7":
+        elif ulang.casefold() == "luas" or ulang == "7":
             LuasSatu()
+        elif ulang.casefold() == "keliling" or ulang "8":
+            KelilingSatu()
         else :
             print("\nHarus memilih salah satu yang ada diatas!")
             onoff = True
@@ -84,7 +87,7 @@ def HitungKelilingPersegiPanjang() :
 
             if panjang > lebar :
                 hasil = (panjang + lebar) * 2
-                print("Keliling = (Panjang + Lebar) * 2\nKeliling = (", panjang, " + ", lebar, " * 2")
+                print("Keliling = (Panjang + Lebar) * 2\nKeliling = (", panjang, " + ", lebar, ") * 2")
                 print("Kelilingnya adalah = ", hasil)
                 UlangKeliling(panjang, lebar)
 
@@ -203,6 +206,8 @@ def UlangPanjangdariLuas(panjang, lebar) :
     4. Menghitung keliling dari panjang dan lebar yang baru? : baru
     5. Menghitung panjang dari keliling dan lebar yang baru? : panjang
     6. Menghitung lebar dari keliling dan panjang yang baru? : lebar
+    7. Menghitung lebar dari luas dan panjang yang baru? : luas
+    8. Menghitung luas dari lebar yang berbeda? : beda
     """)
     if ulang.casefold() == "ya" or ulang == "1" :
         HitungPanjangDariLuas()
