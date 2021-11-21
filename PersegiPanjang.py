@@ -27,7 +27,7 @@ def UlangLuas(panjang, lebar) :
             HitungLebardariLuas()
         elif ulang.casefold() == "luas" or ulang == "7":
             LuasSatu()
-        elif ulang.casefold() == "keliling" or ulang "8":
+        elif ulang.casefold() == "keliling" or ulang == "8" :
             KelilingSatu()
         else :
             print("\nHarus memilih salah satu yang ada diatas!")
@@ -147,6 +147,11 @@ def HitungLebardariLuas() :
       print("\nKeduanya harus menggunakan bilangan bulat!")
       HitungLebardariLuas()
 
+def HitungLebardariKeliling() :
+    print("test")
+
+def HitungPanjangdariKeliling() :
+    print("test")
 
 def PersegiPanjang() :
     onoff = True
@@ -192,7 +197,7 @@ def Keliling() :
         HitungPanjangdariKeliling()
     else :
         print("Harap memilih salah satu yang ada diatas!")
-        keliling()
+        Keliling()
 
 def UlangLebardariLuas() :
     print("test")
@@ -232,6 +237,15 @@ def LuasSatu() :
     else :
         print("Harus memilih dari salah sath diatas!")
         LuasSatu()
+
+def KelilingSatu() :
+    print("test")
+
+def LuastanpaPanjang() :
+    print("test")
+
+def LuastanpaLebar() :
+    print("test")
 
 PersegiPanjang()
 
