@@ -8,23 +8,23 @@ def UlangLuas(panjang, lebar) :
 7. Menghitung luas dengan satu yang berbeda? : luas
 8. Menghitung keliling dengan satu yang berbeda? : keliling
 """)
-    if ulang.casefold() == "ya" or ulang == "1":
+    if ulang.casefold() == "ya" or ulang == "1" :
         HitungLuasPersegiPanjang()
-    elif ulang.casefold() == "tidak" or ulang == "2":
+    elif ulang.casefold() == "tidak" or ulang == "2" :
         print("\nTerima kasih :-)\n")
         exit()
-    elif ulang.casefold() == "sama" or ulang == "3":
+    elif ulang.casefold() == "sama" or ulang == "3" :
         HitungKelilingdariLuas(panjang, lebar)
-    elif ulang.casefold() == "baru" or ulang == "4":
+    elif ulang.casefold() == "baru" or ulang == "4" :
         HitungKelilingPersegiPanjang()
-    elif ulang.casefold() == "panjang" or ulang == "5":
+    elif ulang.casefold() == "panjang" or ulang == "5" :
         HitungPanjangDariLuas()
-    elif ulang.casefold() == "lebar" or ulang == "6":
+    elif ulang.casefold() == "lebar" or ulang == "6" :
         HitungLebardariLuas()
-    elif ulang.casefold() == "luas" or ulang == "7":
-        LuasSatu()
+    elif ulang.casefold() == "luas" or ulang == "7" :
+        LuasSatu(panjang, lebar)
     elif ulang.casefold() == "keliling" or ulang == "8" :
-        KelilingSatu()
+        KelilingSatu(panjang, lebar)
     else :
         print("\nHarus memilih salah satu yang ada diatas!\n")
         UlangLuas(panjang, lebar)
@@ -214,7 +214,7 @@ def UlangLebardariLuas(panjang, lebar) :
     elif ulang.casefold() == "luas" or ulang == "7" :
         HitungLebardariLuas()
     elif ulang.casefold() == "beda" or ulang == "8" :
-        LuastanpaLebar()
+        LuastanpaLebar(panjang)
     else :
         print("\nHarap memilih dari salah satu yang ada di atas!\n")
     
@@ -251,29 +251,73 @@ def UlangPanjangdariLuas(panjang, lebar) :
         UlangPanjangdariLuas()
 
         
-def LuasSatu() :
+def LuasSatu(panjang, lebar) :
     pilih = input("""
     1. Hitung luas dengan hanya panjang yang baru? : panjang
     2. Hitung luas dengan hanya lebar yang baru? : lebar
     3. Kembali
     """)
     if pilih.casefold() == "panjang" or pilih == "1" :
-        LuastanpaPanjang()
+        LuastanpaPanjang(lebar)
     elif pilih.casefold() == "lebar" or pilih == "2" :
-        LuastanpaLebar()
+        LuastanpaLebar(panjang)
     elif pilih.casefold() == "kembali" or pilih == "3" :
         UlangLuas()
     else :
         print("\nHarus memilih dari salah sath diatas!\n")
         LuasSatu()
 
-def KelilingSatu() :
+def KelilingSatu(panjang, lebar) :
+    pilih = input("""
+    1. Hitung Keliling dengan hanya panjang yang baru? : panjang
+    2. Hitung Keliling dengan hanya lebar yang baru? : lebar
+    3. Kembali
+    """)
+    if pilih.casefold() == "panjang" or pilih == "1" :
+        KelilingtanpaPanjang(lebar)
+    elif pilih.casefold() == "lebar" or pilih == "2" :
+        KelilingtanpaLebar(panjang)
+    elif pilih.casefold() == "kembali" or pilih == "3" :
+        UlangKeliling()
+    else :
+        print("\nHarus memilih dari salah sath diatas!\n")
+        KelilingSatu()
+
+def LuastanpaPanjang(lebar) :
+    input_panjang = input("\nMasukan panjang : ")
+    if input_panjang.isdecimal() :
+        panjang = int(input_panjang)
+        if panjang > lebar :
+            hasil = panjang * lebar
+            print("Luas = Panjang * Lebar\nLuas = ", panjang, " * ", lebar)
+            print("Luasnya adalah = ", hasil)
+            UlangLuas(panjang, lebar)
+        else :
+            print("\nPanjang harus lebih besar dari lebar!\nLebar = ", lebar, "\n")
+            LuastanpaPanjang(lebar)
+    else :
+        print("\nHarus menggunakan bilangan bulat!\n")
+        LuastanpaPanjang(lebar)
+
+def LuastanpaLebar(panjang) :
+    input_lebar = input("\nMasukan lebar : ")
+    if input_lebar.isdecimal() :
+        lebar = int(input_lebar)
+        if panjang > lebar : 
+            hasil = panjang * lebar
+            print("Luas = Panjang * Lebar\nLuas = ", panjang, " * ", lebar)
+            print("Luasnya adalah = ", hasil)
+            UlangLuas(panjang, lebar)
+        else : 
+            print("\nLebar harus lebih kecil dari panjang!\nPanjang = ", panjang, "\n")
+            LuastanpaLebar(panjang)
+    else :
+        print("\nHarus menggunakan bilangan bulat!\n")
+        LuastanpaLebar(panjang)
+
+def KelilingtanpaPanjang() :
     print("test")
 
-def LuastanpaPanjang() :
+def KelilingtanpaLebar() :
     print("test")
-
-def LuastanpaLebar() :
-    print("test")
-
 
