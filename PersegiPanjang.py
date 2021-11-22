@@ -1,13 +1,13 @@
 def UlangLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi? 
-1. ya | 2. tidak
-3. Menghitung keliling dari panjang dan lebar yang sama? : sama
-4. Menghitung keliling dari panjang dan lebar yang baru? : baru 
-5. Menghitung panjang dengan luas dan lebar yang baru? : panjang
-6. Menghitung lebar dengan luas dan panjang yang baru? : lebar
-7. Menghitung luas dengan satu yang berbeda? : luas
-8. Menghitung keliling dengan satu yang berbeda? : keliling
-""")
+    1. ya | 2. tidak
+    3. Menghitung keliling dari panjang dan lebar yang sama? : sama
+    4. Menghitung keliling dari panjang dan lebar yang baru? : baru 
+    5. Menghitung panjang dengan luas dan lebar yang baru? : panjang
+    6. Menghitung lebar dengan luas dan panjang yang baru? : lebar
+    7. Menghitung luas dengan satu yang berbeda? : luas
+    8. Menghitung keliling dengan satu yang berbeda? : keliling
+    """)
     if ulang.casefold() == "ya" or ulang == "1" :
         HitungLuasPersegiPanjang()
     elif ulang.casefold() == "tidak" or ulang == "2" :
@@ -32,19 +32,31 @@ def UlangLuas(panjang, lebar) :
         
 def UlangKeliling(panjang, lebar) : 
     ulang = input("""\nApakah anda mau menghitung ulang lagi? 
-1. ya | 2. tidak
-3. Menghitung luas dari panjang dan lebar yang sama? : sama
-4. Menghitung luas dari panjang dan lebar yang baru? : baru 
-""")
+    1. ya | 2. tidak
+    3. Menghitung luas dari panjang dan lebar yang sama? : sama
+    4. Menghitung luas dari panjang dan lebar yang baru? : baru 
+    5. Menghitung panjang dari keliling dan lebar yang baru? : panjang
+    6. Menghitung lebar dari keliling dan panjang yang baru? : lebar
+    7. Menghitung keliling dengan satu yang berbeda? : keliling
+    8. Menghitung luas dengan satu yang berbeda? : luas
+    """)
     if ulang.casefold() == "ya" or ulang == "1":
         HitungKelilingPersegiPanjang()
     elif ulang.casefold() == "tidak" or ulang == "2" :
         print("\nTerima kasih :-)\n")
         exit()
-    elif ulang.casefold() == "sama" or ulang == "3":
+    elif ulang.casefold() == "sama" or ulang == "3" :
         HitungLuasdariKeliling(panjang, lebar)
-    elif ulang.casefold() == "baru" or ulang == "4":
+    elif ulang.casefold() == "baru" or ulang == "4" :
         HitungLuasPersegiPanjang()
+    elif ulang.casefold() == "panjang" or ulang == "5" :
+        HitungPanjangdariKeliling()
+    elif ulang.casefold() == "lebar" or ulang == "6" :
+        HitungLebardariKeliling()
+    elif ulang.casefold() == "keliling" or ulang == "7" :
+        KelilingSatu(panjang, lebar)
+    elif ulang.casefold() == "luas" or ulang == "8" :
+        LuasSatu(panjang, lebar)
     else :
         print("\nHarus memilih salah satu yang ada diatas!\n")
         UlangKeliling(panjang, lebar)
