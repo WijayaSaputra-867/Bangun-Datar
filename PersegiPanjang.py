@@ -28,8 +28,7 @@ def UlangLuas(panjang, lebar) :
     else :
         print("\nHarus memilih salah satu yang ada diatas!\n")
         UlangLuas(panjang, lebar)
-
-        
+       
 def UlangKeliling(panjang, lebar) : 
     ulang = input("""\nApakah anda mau menghitung ulang lagi? 
     1. ya | 2. tidak
@@ -61,7 +60,6 @@ def UlangKeliling(panjang, lebar) :
         print("\nHarus memilih salah satu yang ada diatas!\n")
         UlangKeliling(panjang, lebar)
             
-
 def HitungLuasPersegiPanjang() :
     inputPanjang = input("\nMasukan Panjang : ")
     inputLebar = input("Masukan Lebar : ")
@@ -152,11 +150,41 @@ def HitungLebardariLuas() :
       print("\nKeduanya harus menggunakan bilangan bulat!\n")
       HitungLebardariLuas()
 
-def HitungLebardariKeliling() :
-    print("test")
-
 def HitungPanjangdariKeliling() :
-    print("test")
+    inputKeliling = input("\nMasukan Keliling : ")
+    inputLebar = input("Masukan Lebar : ")
+    if inputKeliling.isdecimal() & inputLebar.isdecimal() :
+        keliling = int(inputKeliling)
+        lebar = int(inputLebar)
+        if keliling > lebar :
+            panjang = (Keliling / 2) - lebar
+            print("Panjang = (keliling / 2) - lebar\nPanjang = (", keliling, " / 2) - ", lebar)
+            print("Panjangnya adalah = ", panjang)
+            UlangPanjangdariKeliling()
+        else :
+            print("\nKeliling harus lebih besar dari lebar!\n")
+            HitungPanjangdariKeliling()
+    else :
+        print("\nHarus menggunakan bilangan bulat!\n")
+        HitungPanjangdariKeliling()
+
+def HitungLebardariKeliling() :
+    inputKeliling = input("\nMasukan Keliling : ")
+    inputPanjang = input("Masukan Panjang : ")
+    if inputKeliling.isdecimal() & inputPanjang().isdecimal() :
+        keliling = int(inputKeliling)
+        panjang = int(inputPanjang)
+        if keliling > panjang :
+            lebar = (Keliling / 2) - panjang
+            print("Lebar = (keliling / 2) - panjang\nLebar = (", keliling, " / 2) - ", panjang)
+            print("Lebarnya adalah = ", lebar)
+            UlangLebardariKeliling()
+        else :
+            print("\nKeliling harus lebih besar dari lebar!\n")
+            HitungLebardariKeliling()
+    else : 
+        print("\nHarus menggunakan bilangan bulat!\n")
+        HitungLebardariKeliling()
 
 def PersegiPanjang() :
     Pilih = input("Menghitung luas atau keliling persegi panjang :\n1. Luas | 2. Keliling\n")
@@ -230,7 +258,6 @@ def UlangLebardariLuas(panjang, lebar) :
     else :
         print("\nHarap memilih dari salah satu yang ada di atas!\n")
     
-
 def UlangPanjangdariLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
     1. Ya | 2. tidak
@@ -262,6 +289,11 @@ def UlangPanjangdariLuas(panjang, lebar) :
         print("\nHarus memilih dari salah satu yang di atas!\n")
         UlangPanjangdariLuas()
 
+def UlangPanjangdariKeliling() :
+    print("test")
+
+def UlangLebardariKeliling() :
+    print("test")
         
 def LuasSatu(panjang, lebar) :
     pilih = input("""
@@ -296,9 +328,9 @@ def KelilingSatu(panjang, lebar) :
         KelilingSatu()
 
 def LuastanpaPanjang(lebar) :
-    input_panjang = input("\nMasukan panjang : ")
-    if input_panjang.isdecimal() :
-        panjang = int(input_panjang)
+    inputPanjang = input("\nMasukan panjang : ")
+    if inputPanjang.isdecimal() :
+        panjang = int(inputPanjang)
         if panjang > lebar :
             hasil = panjang * lebar
             print("Luas = Panjang * Lebar\nLuas = ", panjang, " * ", lebar)
@@ -312,9 +344,9 @@ def LuastanpaPanjang(lebar) :
         LuastanpaPanjang(lebar)
 
 def LuastanpaLebar(panjang) :
-    input_lebar = input("\nMasukan lebar : ")
-    if input_lebar.isdecimal() :
-        lebar = int(input_lebar)
+    inputLebar = input("\nMasukan lebar : ")
+    if inputLebar.isdecimal() :
+        lebar = int(inputLebar)
         if panjang > lebar : 
             hasil = panjang * lebar
             print("Luas = Panjang * Lebar\nLuas = ", panjang, " * ", lebar)
