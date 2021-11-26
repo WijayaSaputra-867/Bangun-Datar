@@ -138,7 +138,7 @@
  [],
  False,
  False,
- 1637969264,
+ 1637970086,
  [('run.exe',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',
