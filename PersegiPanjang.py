@@ -451,9 +451,35 @@ def LuastanpaLebar(panjang) :
         print("\nHarus menggunakan bilangan bulat!\n")
         LuastanpaLebar(panjang)
 
-def KelilingtanpaPanjang() :
-    print("test")
+def KelilingtanpaPanjang(lebar) :
+    inputpanjang = input("\nMasukan panjang : ")
+    if inputpanjang.isdecimal() :
+        panjang = int(inputpanjang)
+        if panjang > lebar :
+            hasil = (panjang + lebar) * 2
+            print("Keliling = (panjang * lebar) * 2\nKeliling = (", panjang, " + ", lebar, ") * 2")
+            print("kelilingnya adalah = ", hasil)
+            UlangKeliling(panjang, lebar)
+        else :
+            print("\nPanjang harus lebih besar dari lebar!\nLebar = ", lebar, "\n")
+            LuastanpaLebar(lebar)
+    else :
+        print("\nHarus menggunakan bilangan bulat!\n")
+        LuastanpaLebar(lebar)
 
-def KelilingtanpaLebar() :
-    print("test")
+def KelilingtanpaLebar(panjang) :
+    inputLebar = input("\nMasukan lebar : ")
+    if inputLebar.isdecimal() :
+        lebar = int(inputLebar)
+        if panjang > lebar : 
+            hasil = (panjang + lebar) * 2
+            print("Keliling = (panjang * lebar) * 2\nKeliling = (", panjang, " + ", lebar, ") * 2")
+            print("kelilingnya adalah = ", hasil)
+            UlangKeliling(panjang, lebar)
+        else : 
+            print("\nLebar harus lebih kecil dari panjang!\nPanjang = ", panjang, "\n")
+            LuastanpaLebar(panjang)
+    else :
+        print("\nHarus menggunakan bilangan bulat!\n")
+        LuastanpaLebar(panjang)
 
