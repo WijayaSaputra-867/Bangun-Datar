@@ -398,7 +398,7 @@ def LuasSatu(panjang, lebar) :
     elif pilih.casefold() == "lebar" or pilih == "2" :
         LuastanpaLebar(panjang)
     elif pilih.casefold() == "kembali" or pilih == "3" :
-        UlangLuas()
+        UlangLuas(panjang, lebar)
     else :
         print("\nHarus memilih dari salah sath diatas!\n")
         LuasSatu()
@@ -409,12 +409,12 @@ def KelilingSatu(panjang, lebar) :
     2. Hitung Keliling dengan hanya lebar yang baru? : lebar
     3. Kembali
     """)
-    if pilih.casefold() == "panjang" or pilih == "1" :
+    if pilih.casefold() == "panjang" or pilih == "1" :  
         KelilingtanpaPanjang(lebar)
     elif pilih.casefold() == "lebar" or pilih == "2" :
         KelilingtanpaLebar(panjang)
     elif pilih.casefold() == "kembali" or pilih == "3" :
-        UlangKeliling()
+        UlangKeliling(panjang, lebar)
     else :
         print("\nHarus memilih dari salah sath diatas!\n")
         KelilingSatu()
