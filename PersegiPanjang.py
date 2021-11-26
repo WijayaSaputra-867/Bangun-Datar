@@ -482,4 +482,3 @@ def KelilingtanpaLebar(panjang) :
     else :
         print("\nHarus menggunakan bilangan bulat!\n")
         LuastanpaLebar(panjang)
-
