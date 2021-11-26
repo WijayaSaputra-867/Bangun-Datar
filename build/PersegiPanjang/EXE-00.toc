@@ -56,13 +56,13 @@
   ('PersegiPanjang',
    'D:\\Projek\\Python\\Bangun-Datar\\PersegiPanjang.py',
    'PYSOURCE'),
-  ('python310.dll',
-   'C:\\Users\\M.Wijaya '
-   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\python310.dll',
-   'BINARY'),
   ('VCRUNTIME140.dll',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\VCRUNTIME140.dll',
+   'BINARY'),
+  ('python310.dll',
+   'C:\\Users\\M.Wijaya '
+   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\python310.dll',
    'BINARY'),
   ('_multiprocessing',
    'C:\\Users\\M.Wijaya '
@@ -138,7 +138,7 @@
  [],
  False,
  False,
- 1637967784,
+ 1637968037,
  [('run.exe',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',

@@ -199,7 +199,7 @@ def HitungLebardariKeliling() :
         HitungLebardariKeliling()
 
 def PersegiPanjang() :
-    Pilih = input("Menghitung luas atau keliling persegi panjang :\n1. Luas | 2. Keliling\n")
+    Pilih = input("Menghitung luas atau keliling persegi panjang :\n1. Luas | 2. Keliling ")
     if Pilih.casefold() == "luas" or Pilih == "1" :
         Luas()  
     elif Pilih.casefold() == "keliling" or Pilih == "2" :
