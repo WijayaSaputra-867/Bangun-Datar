@@ -5,8 +5,10 @@ def UlangLuas(panjang, lebar) :
     4. Menghitung keliling dari panjang dan lebar yang baru? : baru 
     5. Menghitung panjang dengan luas dan lebar yang baru? : panjang
     6. Menghitung lebar dengan luas dan panjang yang baru? : lebar
-    7. Menghitung luas dengan satu yang berbeda? : luas
-    8. Menghitung keliling dengan satu yang berbeda? : keliling
+    7. Mengihtung panjang dari keliling dan lebar yang berbeda? : beda
+    8. Menghitung lebar dari keliling dan panjang yang berbeda? : keliling
+    9. Menghitung luas dengan satu yang berbeda? : luas
+    10. Menghitung keliling dengan satu yang berbeda? : satu
     """)
     if ulang.casefold() == "ya" or ulang == "1" :
         HitungLuasPersegiPanjang()
@@ -21,9 +23,13 @@ def UlangLuas(panjang, lebar) :
         HitungPanjangDariLuas()
     elif ulang.casefold() == "lebar" or ulang == "6" :
         HitungLebardariLuas()
-    elif ulang.casefold() == "luas" or ulang == "7" :
-        LuasSatu(panjang, lebar)
+    elif ulang.casefold() == "beda" or ulang == "7" :
+        HitungPanjangdariKeliling()
     elif ulang.casefold() == "keliling" or ulang == "8" :
+        HitungLebardariKeliling()
+    elif ulang.casefold() == "luas" or ulang == "9" :
+        LuasSatu(panjang, lebar)
+    elif ulang.casefold() == "satu" or ulang == "10" :
         KelilingSatu(panjang, lebar)
     else :
         print("\nHarus memilih salah satu yang ada diatas!\n")
@@ -36,8 +42,10 @@ def UlangKeliling(panjang, lebar) :
     4. Menghitung luas dari panjang dan lebar yang baru? : baru 
     5. Menghitung panjang dari keliling dan lebar yang baru? : panjang
     6. Menghitung lebar dari keliling dan panjang yang baru? : lebar
-    7. Menghitung keliling dengan satu yang berbeda? : keliling
-    8. Menghitung luas dengan satu yang berbeda? : luas
+    7. Menghitung panjang dari luas dan lebar yang berbeda? : beda
+    8. Menghitung lebar dari luas dan panjang yang berbeda? : luas
+    9. Menghitung keliling dengan satu yang berbeda? : keliling
+    10. Menghitung luas dengan satu yang berbeda? : satu
     """)
     if ulang.casefold() == "ya" or ulang == "1":
         HitungKelilingPersegiPanjang()
@@ -52,9 +60,13 @@ def UlangKeliling(panjang, lebar) :
         HitungPanjangdariKeliling()
     elif ulang.casefold() == "lebar" or ulang == "6" :
         HitungLebardariKeliling()
-    elif ulang.casefold() == "keliling" or ulang == "7" :
-        KelilingSatu(panjang, lebar)
+    elif ulang.casefold() == "beda" or ulang == "7" :
+        HitungPanjangDariLuas()
     elif ulang.casefold() == "luas" or ulang == "8" :
+        HitungLebardariLuas()
+    elif ulang.casefold() == "keliling" or ulang == "9" :
+        KelilingSatu(panjang, lebar)
+    elif ulang.casefold() == "satu" or ulang == "10" :
         LuasSatu(panjang, lebar)
     else :
         print("\nHarus memilih salah satu yang ada diatas!\n")
@@ -233,11 +245,12 @@ def UlangLebardariLuas(panjang, lebar) :
     1. Ya | 2. tidak
     3. Menghitung keliling dari panjang dan lebar yang sama? : sama
     4. Menghitung keliling dari panjang dan lebar yang baru? : baru
-    5. Menghitung panjang dari keliling dan lebar yang baru? : panjang
-    6. Menghitung lebar dari keliling dan panjang yang baru? : lebar
-    7. Menghitung lebar dari luas dan panjang yang baru? : luas
-    8. Menghitung luas dengan satu yang berbeda? : beda
-    9. Menghitung keliling dengan satu yang berbeda? : keliling
+    5. Menghitung luas dari panjang dan lebar yang berbeda? : beda
+    6. Menghitung panjang dari keliling dan lebar yang baru? : panjang
+    7. Menghitung lebar dari keliling dan panjang yang baru? : lebar
+    8. Menghitung lebar dari luas dan panjang yang baru? : luas
+    9. Menghitung luas dengan satu yang berbeda? : satu
+    10. Menghitung keliling dengan satu yang berbeda? : keliling
     """)
     if ulang.casefold() == "ya" or ulang == "1" :
         HitungLebardariLuas()
@@ -248,15 +261,17 @@ def UlangLebardariLuas(panjang, lebar) :
         HitungKelilingdariLuas(panjang, lebar)
     elif ulang.casefold() == "baru" or ulang == "4" :
         HitungKelilingPersegiPanjang()
-    elif ulang.casefold() == "panjang" or ulang == "5" :
+    elif ulang.casefold() == "beda" or ulang == "5" :
+        HitungLuasPersegiPanjang()
+    elif ulang.casefold() == "panjang" or ulang == "6" :
         HitungPanjangdariKeliling()
-    elif ulang.casefold() == "lebar" or ulang == "6" :
+    elif ulang.casefold() == "lebar" or ulang == "7" :
         HitungLebardariKeliling()
-    elif ulang.casefold() == "luas" or ulang == "7" :
+    elif ulang.casefold() == "luas" or ulang == "8" :
         HitungLebardariLuas()
-    elif ulang.casefold() == "beda" or ulang == "8" :
+    elif ulang.casefold() == "satu" or ulang == "9" :
         LuasSatu(panjang, lebar)
-    elif ulang.casefold() == "keliling" or ulang == "9" :
+    elif ulang.casefold() == "keliling" or ulang == "10" :
         KelilingSatu(panjang, lebar)
     else :
         print("\nHarap memilih dari salah satu yang ada di atas!\n")
@@ -264,13 +279,14 @@ def UlangLebardariLuas(panjang, lebar) :
 def UlangPanjangdariLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
     1. Ya | 2. tidak
-    3. Menghitung keliling dari panjang dan lebar yang sama? : sama
-    4. Menghitung keliling dari panjang dan lebar yang baru? : baru
-    5. Menghitung panjang dari keliling dan lebar yang baru? : panjang
-    6. Menghitung lebar dari keliling dan panjang yang baru? : lebar
-    7. Menghitung lebar dari luas dan panjang yang baru? : luas
-    8. Menghitung luas dengan satu yang berbeda? : beda
-    9. Menghitung Keliling dengan satu yang berbeda? : keliling
+    3. Menghitung keliling dengan panjang dan lebar yang sama? : sama
+    4. Menghitung keliling dengan panjang dan lebar yang baru? : baru
+    5. Menghitung luas dengan panjang dan lebar yang berbeda? : beda
+    6. Menghitung panjang dari keliling dan lebar yang baru? : panjang
+    7. Menghitung lebar dari keliling dan panjang yang baru? : lebar
+    8. Menghitung lebar dari luas dan panjang yang baru? : luas
+    9. Menghitung luas dengan satu yang berbeda? : satu
+    10. Menghitung Keliling dengan satu yang berbeda? : keliling
     """)
     if ulang.casefold() == "ya" or ulang == "1" :
         HitungPanjangDariLuas()
@@ -281,15 +297,17 @@ def UlangPanjangdariLuas(panjang, lebar) :
         HitungKelilingdariLuas(panjang, lebar)
     elif ulang.casefold() == "beda" or ulang == "4" :
         HitungKelilingPersegiPanjang()
-    elif ulang.casefold() == "panjang" or ulang == "5" :
+    elif ulang.casefold() == "beda" or ulang == "5" :
+        HitungLuasPersegiPanjang()
+    elif ulang.casefold() == "panjang" or ulang == "6" :
         HitungPanjangdariKeliling()
-    elif ulang.casefold() == "lebar" or ulang == "6" :
+    elif ulang.casefold() == "lebar" or ulang == "7" :
         HitungLebardariKeliling()
-    elif ulang.casefold() == "luas" or ulang == "7" :
+    elif ulang.casefold() == "luas" or ulang == "8" :
         HitungLebardariLuas()
-    elif ulang.casefold() == "beda" or ulang == "8" :
+    elif ulang.casefold() == "satu" or ulang == "9" :
         LuasSatu(panjang, lebar)
-    elif ulang.casefold() == "keliling" or ulang == "9" :
+    elif ulang.casefold() == "keliling" or ulang == "10" :
         KelilingSatu(panjang, lebar)
     else :
         print("\nHarus memilih dari salah satu yang di atas!\n")
