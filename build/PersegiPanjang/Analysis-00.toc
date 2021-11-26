@@ -909,6 +909,10 @@
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\multiprocessing\\__init__.py',
    'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\M.Wijaya '
+   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
+   'PYMODULE'),
   ('_py_abc',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
@@ -916,10 +920,6 @@
   ('stringprep',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Users\\M.Wijaya '
-   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
    'PYMODULE')],
  [('VCRUNTIME140.dll',
    'C:\\Users\\M.Wijaya '
@@ -985,13 +985,13 @@
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_ctypes.pyd',
    'EXTENSION'),
-  ('libssl-1_1.dll',
-   'C:\\Users\\M.Wijaya '
-   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libssl-1_1.dll',
-   'BINARY'),
   ('libcrypto-1_1.dll',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Users\\M.Wijaya '
+   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libssl-1_1.dll',
    'BINARY'),
   ('libffi-7.dll',
    'C:\\Users\\M.Wijaya '

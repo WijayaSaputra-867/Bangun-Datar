@@ -883,6 +883,10 @@
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\multiprocessing\\__init__.py',
    'PYMODULE'),
+  ('tracemalloc',
+   'C:\\Users\\M.Wijaya '
+   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
+   'PYMODULE'),
   ('_py_abc',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\_py_abc.py',
@@ -890,8 +894,4 @@
   ('stringprep',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\stringprep.py',
-   'PYMODULE'),
-  ('tracemalloc',
-   'C:\\Users\\M.Wijaya '
-   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\tracemalloc.py',
    'PYMODULE')])

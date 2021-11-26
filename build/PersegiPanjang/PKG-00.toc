@@ -113,13 +113,13 @@
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_ctypes.pyd',
    'EXTENSION'),
-  ('libssl-1_1.dll',
-   'C:\\Users\\M.Wijaya '
-   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libssl-1_1.dll',
-   'BINARY'),
   ('libcrypto-1_1.dll',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Users\\M.Wijaya '
+   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libssl-1_1.dll',
    'BINARY'),
   ('libffi-7.dll',
    'C:\\Users\\M.Wijaya '
