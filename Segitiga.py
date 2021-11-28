@@ -1,0 +1,2 @@
+def HitungLuasSegitiga():
+    print("test")
