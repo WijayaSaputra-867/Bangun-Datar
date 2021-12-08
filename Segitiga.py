@@ -170,7 +170,7 @@ def PilihSegitiga() :
 def Segitiga() :
     pilih = input("""Menghitung luas dan keliling segitiga
     1. Luas
-    2. Segitiga
+    2. Keliling
     """)
     if pilih.casefold() == "luas" or pilih == "1" :
         Luas()
