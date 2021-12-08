@@ -1,8 +1,32 @@
 def UlangLuas() :
-    print("test")
+    ulang = input("""Apakah anda mau menghitung ulang lagi?
+    1. Ya | 2. Tidak
+    3. Menghitung keliling dengan sisi : keliling
+    """)
+    if ulang.casefold() == "ya" or ulang == "1" :
+        HitungLuasSegitiga()
+    elif ulang.casefold() == "tidak" or ulang == "2" :
+        print("\nTerima kasih :-)\n")
+        exit()
+    elif ulang == "keliling" or ulang == "3" :
+        HitungKelilingSegitiga()
+    else :
+        print("\nHarus memilih salah satu yang ada di atas!\n")
 
 def UlangKeliling() :
-    print("test")
+    ulang = input("""Apakah anda mau menghitung ulang lagi?
+    1. Ya | 2. Tidak
+    3. Menghitung luas dengan alas dan tinggi : luas
+    """)
+    if ulang.casefold() == "ya" or ulang == "1" :
+        HitungKelilingSegitiga()
+    elif ulang.casefold() == "tidak" or ulang == "2" :
+        print("\nTerima kasih :-)\n")
+        exit()
+    elif ulang == "luas" or ulang == "3" :
+        HitungLuasSegitiga()
+    else :
+        print("\nHarus memilih salah satu yang ada di atas!\n")
 
 def HitungLuasSegitiga() :
     inputAlas = input("\nMasukan alas : ")
@@ -143,4 +167,23 @@ def PilihSegitiga() :
         print("\nHarus di isi!\n")
         PilihSegitiga()
 
-HitungKelilingSegitiga()
+def Segitiga() :
+    pilih = input("""Menghitung luas dan keliling segitiga
+    1. Luas
+    2. Segitiga
+    """)
+    if pilih.casefold() == "luas" or pilih == "1" :
+        Luas()
+    elif pilih.casefold() == "keliling" or pilih == "2" :
+        Keliling()
+    else :
+        print("\nHarus memilih salah satu dari di atas!\n")
+        Segitiga()
+
+def Luas() :
+    HitungLuasSegitiga()
+
+def Keliling() :
+    HitungKelilingSegitiga()
+
+Segitiga()
