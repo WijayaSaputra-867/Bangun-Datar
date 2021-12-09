@@ -181,9 +181,59 @@ def Segitiga() :
         Segitiga()
 
 def Luas() :
-    HitungLuasSegitiga()
+    pilih = input("""
+    1. Hitung Luas
+    2. Hitung Alas
+    3. Hitung Tinggi
+    """)
+    if pilih  != "" :
+        
+        if pilih == "luas" or pilih == "1" :
+            HitungLuasSegitiga()
+
+        elif pilih == "alas" or pilih == "2" :
+            HitungAlasdariLuas()
+        
+        elif pilih == "tinggi" or pilih == "3":
+            HitungTinggidariLuas()
+        
+        else :
+            print("\nHarus memilih salah satu dari di atas!\n")
+            Luas()
+
+    else :
+        print("\nHarus di isi!\n")
+        Luas()
 
 def Keliling() :
-    HitungKelilingSegitiga()
+    pilih = input("""
+    1. Hitung keliling : keliling
+    2. Hitung sisi : sisi
+    """)
+
+    if pilih  != "" :
+        
+        if pilih == "keliling" or pilih == "1" :
+            HitungKelilingSegitiga()
+
+        elif pilih == "sisi" or pilih == "2" :
+            HitungSisidariKeliling()
+
+        else :
+            print("\nHarus memilih salah satu dari di atas!\n")
+            Keliling()
+        
+    else :
+        print("\nHarus di isi! \n")  
+        Keliling()  
+
+def HitungAlasdariLuas() :
+    print("test")
+
+def HitungTinggidariLuas() :
+    print("test")
+
+def HitungSisidariKeliling() :
+    print("test")
 
 Segitiga()
