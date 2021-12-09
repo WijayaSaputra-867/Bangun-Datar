@@ -120,13 +120,13 @@
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\_ctypes.pyd',
    'EXTENSION'),
-  ('libssl-1_1.dll',
-   'C:\\Users\\M.Wijaya '
-   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libssl-1_1.dll',
-   'BINARY'),
   ('libcrypto-1_1.dll',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libcrypto-1_1.dll',
+   'BINARY'),
+  ('libssl-1_1.dll',
+   'C:\\Users\\M.Wijaya '
+   'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\DLLs\\libssl-1_1.dll',
    'BINARY'),
   ('libffi-7.dll',
    'C:\\Users\\M.Wijaya '
@@ -138,7 +138,7 @@
  [],
  False,
  False,
- 1637900026,
+ 1637970086,
  [('run.exe',
    'C:\\Users\\M.Wijaya '
    'Saputra\\AppData\\Local\\Programs\\Python\\Python310\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',
