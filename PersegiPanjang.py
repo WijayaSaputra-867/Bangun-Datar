@@ -169,8 +169,8 @@ def HitungPanjangdariKeliling() :
         keliling = int(inputKeliling)
         lebar = int(inputLebar)
         if keliling > lebar :
-            panjang = (Keliling / 2) - lebar
-            print("Panjang = (keliling / 2) - lebar\nPanjang = (", keliling, " / 2) - ", lebar)
+            panjang = keliling / 2 - lebar
+            print("Panjang = (keliling / 2) - lebar\nPanjang = ("+keliling+ " / 2) - ", lebar)
             print("Panjangnya adalah = ", panjang)
             UlangPanjangdariKeliling(panjang , lebar)
         else :
@@ -183,14 +183,14 @@ def HitungPanjangdariKeliling() :
 def HitungLebardariKeliling() :
     inputKeliling = input("\nMasukan Keliling : ")
     inputPanjang = input("Masukan Panjang : ")
-    if inputKeliling.isdecimal() & inputPanjang().isdecimal() :
+    if inputKeliling.isdecimal() & inputPanjang.isdecimal() :
         keliling = int(inputKeliling)
         panjang = int(inputPanjang)
         if keliling > panjang :
-            lebar = (Keliling / 2) - panjang
-            print("Lebar = (keliling / 2) - panjang\nLebar = (", keliling, " / 2) - ", panjang)
+            lebar = (keliling / 2) - panjang
+            print("Lebar = (keliling / 2) - panjang\nLebar = ("+keliling+" / 2) - ", panjang)
             print("Lebarnya adalah = ", lebar)
-            UlangLebardariKeliling()
+            UlangLebardariKeliling(panjang, lebar)
         else :
             print("\nKeliling harus lebih besar dari lebar!\n")
             HitungLebardariKeliling()
@@ -275,6 +275,7 @@ def UlangLebardariLuas(panjang, lebar) :
         KelilingSatu(panjang, lebar)
     else :
         print("\nHarap memilih dari salah satu yang ada di atas!\n")
+        UlangLebardariLuas(panjang, lebar)
     
 def UlangPanjangdariLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
@@ -311,7 +312,7 @@ def UlangPanjangdariLuas(panjang, lebar) :
         KelilingSatu(panjang, lebar)
     else :
         print("\nHarus memilih dari salah satu yang di atas!\n")
-        UlangPanjangdariLuas()
+        UlangPanjangdariLuas(panjang, lebar)
 
 def UlangPanjangdariKeliling(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
@@ -348,7 +349,7 @@ def UlangPanjangdariKeliling(panjang, lebar) :
         KelilingSatu(panjang, lebar)
     else :
         print("\nHarus memilih salah satu dari di atas!\n")
-        UlangPanjangdariKeliling()
+        UlangPanjangdariKeliling(panjang, lebar)
     
 def UlangLebardariKeliling(panjang , lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
@@ -385,7 +386,7 @@ def UlangLebardariKeliling(panjang , lebar) :
         KelilingSatu(panjang, lebar)
     else :
         print("\nHarus memilih salah satu dari di atas!\n")
-        UlangPanjangdariKeliling()
+        UlangPanjangdariKeliling(panjang , lebar)
         
 def LuasSatu(panjang, lebar) :
     pilih = input("""
@@ -401,7 +402,7 @@ def LuasSatu(panjang, lebar) :
         UlangLuas(panjang, lebar)
     else :
         print("\nHarus memilih dari salah sath diatas!\n")
-        LuasSatu()
+        LuasSatu(panjang, lebar)
 
 def KelilingSatu(panjang, lebar) :
     pilih = input("""
@@ -417,7 +418,7 @@ def KelilingSatu(panjang, lebar) :
         UlangKeliling(panjang, lebar)
     else :
         print("\nHarus memilih dari salah sath diatas!\n")
-        KelilingSatu()
+        KelilingSatu(panjang , lebar)
 
 def LuastanpaPanjang(lebar) :
     inputPanjang = input("\nMasukan panjang : ")
