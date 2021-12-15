@@ -228,7 +228,38 @@ def Keliling() :
         Keliling()  
 
 def HitungAlasdariLuas() :
-    print("test")
+    inputLuas = input("\nMasukan Luas : ")
+    inputTinggi = input("Masukan Tinggi : ")
+
+    if inputLuas != "" and inputTinggi != "" :
+
+        if inputLuas.isdigit() & inputTinggi.isdigit() :
+            luas = int(inputLuas) 
+            tinggi = int(inputTinggi)
+
+            if luas != 0 & tinggi != 0 :
+                
+                if luas > tinggi :
+                    alas = luas / tinggi * 2
+                    print(f"Alas = luas / tinggi * 2\nAlas = {luas} / {tinggi} * 2")
+                    print(f"Alasnya adalah = {alas}")
+                    UlangAlasdariLuas()
+
+                else :
+                    print("\nLuas harus lebih besar dari tinggi!\n")
+                    HitungAlasdariLuas()
+            
+            else :
+                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                HitungAlasdariLuas()
+
+        else :
+            print("\nKeduanya harus menggunakan bilangan bulat!\n")
+            HitungAlasdariLuas()
+
+    else :
+        print("\nKeduanya harus di isi!\n")
+        HitungAlasdariLuas()
 
 def HitungTinggidariLuas() :
     print("test")
@@ -236,4 +267,13 @@ def HitungTinggidariLuas() :
 def HitungSisidariKeliling() :
     print("test")
 
+def UlangAlasdariLuas() :
+    print("test")
+
+def UlangTinggidariLuas() :
+    print("test")
+
+def UlangSisidariKeliling() :
+    print("test")
+        
 Segitiga()
