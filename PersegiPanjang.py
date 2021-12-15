@@ -81,8 +81,8 @@ def HitungLuasPersegiPanjang() :
 
         if panjang > lebar :
             hasil = panjang * lebar
-            print("Luas = Panjang * Lebar\nLuas = ", panjang, " * ", lebar)
-            print("Luasnya adalah = ", hasil)
+            print(f"Luas = Panjang * Lebar\nLuas = {panjang} * {lebar}")
+            print(f"Luasnya adalah = {hasil}")
             UlangLuas(panjang, lebar)
 
         else :
@@ -102,8 +102,8 @@ def HitungKelilingPersegiPanjang() :
 
         if panjang > lebar :
             hasil = (panjang + lebar) * 2
-            print("Keliling = (Panjang + Lebar) * 2\nKeliling = (", panjang, " + ", lebar, ") * 2")
-            print("Kelilingnya adalah = ", hasil)
+            print(f"Keliling = (Panjang + Lebar) * 2\nKeliling = ( {panjang} +  {lebar}) * 2")
+            print(f"Kelilingnya adalah = {hasil}")
             UlangKeliling(panjang, lebar)
 
         else :
@@ -116,14 +116,14 @@ def HitungKelilingPersegiPanjang() :
 
 def HitungKelilingdariLuas(panjang, lebar) :
     hasil = (panjang + lebar) * 2
-    print("Keliling = (Panjang + Lebar) * 2\nKeliling = (", panjang, " + ", lebar, " ) * 2")
-    print("Kelilingnya adalah = ", hasil)
+    print(f"Keliling = (Panjang + Lebar) * 2\nKeliling = ({panjang} + {lebar}) * 2")
+    print(f"Kelilingnya adalah = {hasil}")
     UlangKeliling(panjang, lebar)
 
 def HitungLuasdariKeliling(panjang, lebar) :
     hasil = panjang * lebar
-    print("Luas = Panjang * Lebar\nLuas = ", panjang, " * ", lebar)
-    print("Luasnya adalah = ", hasil)
+    print(f"Luas = Panjang * Lebar\nLuas = {panjang} * {lebar}")
+    print(f"Luasnya adalah = {hasil}")
     UlangLuas(panjang, lebar)
 
 def HitungPanjangDariLuas() :
@@ -134,8 +134,8 @@ def HitungPanjangDariLuas() :
         lebar = int(inputLebar)
         if luas > lebar :
             panjang = luas / lebar
-            print("Panjang = luas / lebar\nPanjang = ", luas, " / ", lebar)
-            print("Panjangnya adalah = ", panjang)
+            print(f"Panjang = luas / lebar\nPanjang = {luas} / {lebar}")
+            print(f"Panjangnya adalah = {panjang}")
             UlangPanjangdariLuas(panjang, lebar)
         else :
             print("\nLuas harus lebih besar dari lebar!\n")
@@ -152,8 +152,8 @@ def HitungLebardariLuas() :
         panjang = int(inputPanjang)
         if luas > panjang :
             lebar = luas / panjang
-            print("Lebar = luas / lebar\nLebar = ", luas, " / ", panjang)
-            print("Lebarnya adalah = ", lebar)
+            print(f"Lebar = luas / lebar\nLebar = {luas} / {panjang}")
+            print(f"Lebarnya adalah = {lebar}")
             UlangLebardariLuas()
         else :
             print("\nLuas harus lebih besar dari panjang!\n")
@@ -170,8 +170,8 @@ def HitungPanjangdariKeliling() :
         lebar = int(inputLebar)
         if keliling > lebar :
             panjang = keliling / 2 - lebar
-            print("Panjang = (keliling / 2) - lebar\nPanjang = ("+keliling+ " / 2) - ", lebar)
-            print("Panjangnya adalah = ", panjang)
+            print(f"Panjang = (keliling / 2) - lebar\nPanjang = ({keliling}  / 2) - {lebar}")
+            print(f"Panjangnya adalah = {panjang}")
             UlangPanjangdariKeliling(panjang , lebar)
         else :
             print("\nKeliling harus lebih besar dari lebar!\n")
@@ -188,8 +188,8 @@ def HitungLebardariKeliling() :
         panjang = int(inputPanjang)
         if keliling > panjang :
             lebar = (keliling / 2) - panjang
-            print("Lebar = (keliling / 2) - panjang\nLebar = ("+keliling+" / 2) - ", panjang)
-            print("Lebarnya adalah = ", lebar)
+            print(f"Lebar = (keliling / 2) - panjang\nLebar = ({keliling} / 2) - {panjang}")
+            print(f"Lebarnya adalah = {lebar}")
             UlangLebardariKeliling(panjang, lebar)
         else :
             print("\nKeliling harus lebih besar dari lebar!\n")
@@ -426,11 +426,11 @@ def LuastanpaPanjang(lebar) :
         panjang = int(inputPanjang)
         if panjang > lebar :
             hasil = panjang * lebar
-            print("Luas = Panjang * Lebar\nLuas = ", panjang, " * ", lebar)
-            print("Luasnya adalah = ", hasil)
+            print(f"Luas = Panjang * Lebar\nLuas =  {panjang} *  {lebar}")
+            print(f"Luasnya adalah = {hasil}")
             UlangLuas(panjang, lebar)
         else :
-            print("\nPanjang harus lebih besar dari lebar!\nLebar = ", lebar, "\n")
+            print(f"\nPanjang harus lebih besar dari lebar!\nLebar = {lebar}\n")
             LuastanpaPanjang(lebar)
     else :
         print("\nHarus menggunakan bilangan bulat!\n")
@@ -442,8 +442,8 @@ def LuastanpaLebar(panjang) :
         lebar = int(inputLebar)
         if panjang > lebar : 
             hasil = panjang * lebar
-            print("Luas = Panjang * Lebar\nLuas = ", panjang, " * ", lebar)
-            print("Luasnya adalah = ", hasil)
+            print(f"Luas = Panjang * Lebar\nLuas = {panjang} * {lebar}")
+            print(f"Luasnya adalah = {hasil}")
             UlangLuas(panjang, lebar)
         else : 
             print("\nLebar harus lebih kecil dari panjang!\nPanjang = ", panjang, "\n")
@@ -458,11 +458,11 @@ def KelilingtanpaPanjang(lebar) :
         panjang = int(inputpanjang)
         if panjang > lebar :
             hasil = (panjang + lebar) * 2
-            print("Keliling = (panjang * lebar) * 2\nKeliling = (", panjang, " + ", lebar, ") * 2")
-            print("kelilingnya adalah = ", hasil)
+            print(f"Keliling = (panjang * lebar) * 2\nKeliling = ({panjang} + {lebar}) * 2")
+            print(f"kelilingnya adalah = {hasil}")
             UlangKeliling(panjang, lebar)
         else :
-            print("\nPanjang harus lebih besar dari lebar!\nLebar = ", lebar, "\n")
+            print(f"\nPanjang harus lebih besar dari lebar!\nLebar = {lebar}\n")
             LuastanpaLebar(lebar)
     else :
         print("\nHarus menggunakan bilangan bulat!\n")
@@ -474,11 +474,11 @@ def KelilingtanpaLebar(panjang) :
         lebar = int(inputLebar)
         if panjang > lebar : 
             hasil = (panjang + lebar) * 2
-            print("Keliling = (panjang * lebar) * 2\nKeliling = (", panjang, " + ", lebar, ") * 2")
-            print("kelilingnya adalah = ", hasil)
+            print(f"Keliling = (panjang * lebar) * 2\nKeliling = ({panjang} +  {lebar}) * 2")
+            print(f"kelilingnya adalah = {hasil}")
             UlangKeliling(panjang, lebar)
         else : 
-            print("\nLebar harus lebih kecil dari panjang!\nPanjang = ", panjang, "\n")
+            print(f"\nLebar harus lebih kecil dari panjang!\nPanjang = {panjang}\n")
             LuastanpaLebar(panjang)
     else :
         print("\nHarus menggunakan bilangan bulat!\n")
