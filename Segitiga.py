@@ -40,8 +40,8 @@ def HitungLuasSegitiga() :
 
             if alas != 0 and tinggi != 0 :
                luas = int(alas * tinggi * 0.5)
-               print("Luas = ½ * alas * tinggi\nLuas = ½ * ", alas, " * ", tinggi)
-               print("Luasnya adalah = ", luas)
+               print(f"Luas = ½ * alas * tinggi\nLuas = ½ * {alas} * {tinggi}")
+               print(f"Luasnya adalah = {luas}")
                UlangLuas()
 
             else :
@@ -69,8 +69,8 @@ def HitungKelilingSegitiga() :
                 
                 if sisi  != 0 :
                     keliling = sisi * 3
-                    print("Keliling = sisi + sisi + sisi\nKeliling = ", sisi, " + ", sisi, " + ", sisi)
-                    print("Kelilingnya adalah = ", keliling)
+                    print(f"Keliling = sisi + sisi + sisi\nKeliling = {sisi} + {sisi} + {sisi}")
+                    print(f"Kelilingnya adalah = {keliling}")
                     UlangKeliling()
 
                 else :
@@ -97,8 +97,8 @@ def HitungKelilingSegitiga() :
                 
                 if sisi  != 0 & beda != 0 :
                     keliling = (sisi * 2) + beda
-                    print("Keliling = sisi + sisi + sisi\nKeliling = ", sisi, " + ", sisi, " + ", beda)
-                    print("Kelilingnya adalah = ", keliling)
+                    print(f"Keliling = sisi + sisi + sisi\nKeliling = {sisi} + {sisi} + {beda}")
+                    print(f"Kelilingnya adalah = {keliling}")
                     UlangKeliling()
 
                 else :
@@ -128,8 +128,8 @@ def HitungKelilingSegitiga() :
                 
                 if satu  != 0 & dua != 0 & tiga != 0:
                     keliling = satu + dua + tiga
-                    print("Keliling = sisi + sisi + sisi\nKeliling = ", satu, " + ", dua, " + ", tiga)
-                    print("Kelilingnya adalah = ", keliling)
+                    print(f"Keliling = sisi + sisi + sisi\nKeliling = {satu} + {dua} + {tiga}")
+                    print(f"Kelilingnya adalah = {keliling}")
                     UlangKeliling()
 
                 else :
