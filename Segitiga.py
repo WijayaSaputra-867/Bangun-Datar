@@ -277,7 +277,38 @@ def HitungAlasdariLuas() :
         HitungAlasdariLuas()
 
 def HitungTinggidariLuas() :
-    print("test")
+    inputLuas = input("\nMasukan Luas : ")
+    inputAlas = input("Masukan Alas : ")
+    
+    if inputLuas  != "" and inputAlas  != "" :
+
+        if inputLuas.isdigit() and inputAlas.isdigit() :
+            luas = int(inputLuas)
+            alas = int(inputAlas)
+        
+            if luas  != 0 and alas  != 0 :
+
+                if luas  > alas :
+                    tinggi = luas / alas * 2
+                    print(f"Tinggi = luas / alas * 2\nTinggi = {luas} / {alas} * 2")
+                    print(f"TIngginya adalah = {tinggi}")
+                    UlangTinggidariLuas()
+
+                else :
+                    print("\nLuas harus lebih besar dari alas!\n")
+                    HitungTinggidariLuas()
+            
+            else :
+                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                HitungTinggidariLuas()
+        
+        else :
+            print("\nKeduanya harus menggunakan bilangan bulat!\n")
+            HitungTinggidariLuas()
+    
+    else :
+        print("\nKeduanya harus di isi!\n")
+        HitungTinggidariLuas()
 
 def HitungSisidariKeliling() :
     print("test")
