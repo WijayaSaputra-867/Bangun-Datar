@@ -311,7 +311,19 @@ def HitungTinggidariLuas() :
         HitungTinggidariLuas()
 
 def HitungSisidariKeliling() :
-    print("test")
+    segitiga = PilihSegitiga()
+
+    if segitiga == "sisi" :
+        SisiSegitigasamaSisi()
+
+    elif segitiga == "kaki" :
+        SisiSegitigasamaKaki()
+
+    elif segitiga == "sembarang" :
+        SisiSegitigaSembarang()
+    
+    else :
+        PilihSegitiga()
 
 def UlangAlasdariLuas() :
     print("test")
@@ -320,6 +332,15 @@ def UlangTinggidariLuas() :
     print("test")
 
 def UlangSisidariKeliling() :
+    print("test")
+
+def SisiSegitigasamaSisi() :
+    print("test")
+
+def SisiSegitigasamaKaki() :
+    print("test")
+
+def SisiSegitigaSembarang() :
     print("test")
 
 Segitiga()
