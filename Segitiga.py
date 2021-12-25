@@ -180,8 +180,7 @@ def PilihSegitiga() :
 
 def Segitiga() :
     pilih = input("""Menghitung luas dan keliling segitiga
-    1. Luas
-    2. Keliling
+    1. Luas | 2. Keliling
     """)
 
     if pilih.casefold() == "luas" or pilih == "1" :
@@ -335,12 +334,68 @@ def UlangSisidariKeliling() :
     print("test")
 
 def SisiSegitigasamaSisi() :
-    print("test")
+    inputKeliling = input("\nMasukan Keliling : ")
+
+    if inputKeliling  != "" :
+        
+        if inputKeliling.isdigit() :
+            keliling = int(inputKeliling)
+
+            if keliling  != 0 :
+                sisi = keliling / 3
+                print(f"Sisi segitiga sama sisi = keliling / 3\nSisi = {keliling} / 3")
+                print(f"Sisinya adalah = {sisi}")
+                UlangSisidariKeliling()
+
+            else :
+                print("\nKeliling tidak boleh sama dengan 0!\n")
+                SisiSegitigasamaSisi()
+        
+        else :
+            print("\nKeliling harus menggunakan bilangan bulat!\n")
+            SisiSegitigasamaSisi()
+    
+    else :
+        print("\nKeliling harus di isi!\n")
+        SisiSegitigasamaSisi()
 
 def SisiSegitigasamaKaki() :
-    print("test")
+    pilih = input("""
+    1. Menghitung sisi yang sama? : sama
+    2. Menghitung sisi yang berbeda? : beda
+    """)
+    
+    if pilih != "" :
+
+        if pilih.casefold() == "sama"  or pilih == "1" :
+            SisiSama()
+
+        elif pilih.casefold() == "beda" or pilih == "2" :
+            SisiBeda()
+        
+        else :
+            print("\nHarus melilih salah satu yang ada di atas!\n")
+            SisiSegitigasamaKaki()
+    else :
+        print("\nHarus di isi!\n")
+        SisiSegitigasamaKaki()
 
 def SisiSegitigaSembarang() :
+    print("test")
+
+def SisiSama() :
+    print("test")
+
+def SisiBeda() :
+    print("test")
+
+def SisiPanjang() :
+    print("test")
+
+def SisiPendek() :
+    print("test")
+
+def SisiSedang() :
     print("test")
 
 Segitiga()
