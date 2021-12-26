@@ -4,18 +4,25 @@ def UlangLuas() :
     3. Menghitung keliling dengan sisi : keliling
     """)
 
-    if ulang.casefold() == "ya" or ulang == "1" :
-        HitungLuasSegitiga()
+    if ulang  != "" :
+        
+        if ulang.casefold() == "ya" or ulang == "1" :
+            HitungLuasSegitiga()
 
-    elif ulang.casefold() == "tidak" or ulang == "2" :
-        print("\nTerima kasih :-)\n")
-        exit()
+        elif ulang.casefold() == "tidak" or ulang == "2" :
+            print("\nTerima kasih :-)\n")
+            exit()
 
-    elif ulang == "keliling" or ulang == "3" :
-        HitungKelilingSegitiga()
+        elif ulang == "keliling" or ulang == "3" :
+            HitungKelilingSegitiga()
+
+        else :
+            print("\nHarus memilih salah satu yang ada di atas!\n")
+            UlangLuas()
 
     else :
-        print("\nHarus memilih salah satu yang ada di atas!\n")
+        print("\nTidak boleh kosong!\n")
+        UlangLuas()
 
 def UlangKeliling() :
     ulang = input("""Apakah anda mau menghitung ulang lagi?
@@ -23,18 +30,25 @@ def UlangKeliling() :
     3. Menghitung luas dengan alas dan tinggi : luas
     """)
 
-    if ulang.casefold() == "ya" or ulang == "1" :
-        HitungKelilingSegitiga()
+    if ulang  != "" :
 
-    elif ulang.casefold() == "tidak" or ulang == "2" :
-        print("\nTerima kasih :-)\n")
-        exit()
+        if ulang.casefold() == "ya" or ulang == "1" :
+            HitungKelilingSegitiga()
 
-    elif ulang == "luas" or ulang == "3" :
-        HitungLuasSegitiga()
+        elif ulang.casefold() == "tidak" or ulang == "2" :
+            print("\nTerima kasih :-)\n")
+            exit()
+
+        elif ulang == "luas" or ulang == "3" :
+            HitungLuasSegitiga()
+
+        else :
+            print("\nHarus memilih salah satu yang ada di atas!\n")
+            UlangKeliling()
 
     else :
-        print("\nHarus memilih salah satu yang ada di atas!\n")
+        print("\nTidak boleh kosong!\n")
+        UlangKeliling()
 
 def HitungLuasSegitiga() :
     inputAlas = input("\nMasukan alas : ")
@@ -61,7 +75,7 @@ def HitungLuasSegitiga() :
             HitungLuasSegitiga()
 
     else :
-        print("\nKeduanya harus di isi!\n")
+        print("\nKeduanya tidak boleh kosong!\n")
         HitungLuasSegitiga()
 
 def HitungKelilingSegitiga() :
@@ -90,7 +104,7 @@ def HitungKelilingSegitiga() :
                 HitungKelilingSegitiga()
         
         else :
-            print("\nSisi tidak boleh kosong!\n")
+            print("\nSisinya tidak boleh kosong!\n")
             HitungKelilingSegitiga()
 
     elif segitiga == "kaki" :
@@ -114,7 +128,7 @@ def HitungKelilingSegitiga() :
                     HitungKelilingSegitiga()
             
             else :
-                print("\nkedua sisinya harus menggunakan bilangan bulat!\n")
+                print("\nKedua sisinya harus menggunakan bilangan bulat!\n")
                 HitungKelilingSegitiga()
         
         else :
@@ -175,7 +189,7 @@ def PilihSegitiga() :
             PilihSegitiga()
     
     else :
-        print("\nHarus di isi!\n")
+        print("\nTidak boleh kosong!\n")
         PilihSegitiga()
 
 def Segitiga() :
@@ -183,14 +197,20 @@ def Segitiga() :
     1. Luas | 2. Keliling
     """)
 
-    if pilih.casefold() == "luas" or pilih == "1" :
-        Luas()
+    if pilih  != "" :
 
-    elif pilih.casefold() == "keliling" or pilih == "2" :
-        Keliling()
+        if pilih.casefold() == "luas" or pilih == "1" :
+            Luas()
+
+        elif pilih.casefold() == "keliling" or pilih == "2" :
+            Keliling()
+
+        else :
+            print("\nHarus memilih salah satu dari di atas!\n")
+            Segitiga()
 
     else :
-        print("\nHarus memilih salah satu dari di atas!\n")
+        print("\nTidak boleh kosong!\n")
         Segitiga()
 
 def Luas() :
@@ -216,7 +236,7 @@ def Luas() :
             Luas()
 
     else :
-        print("\nHarus di isi!\n")
+        print("\nTidak boleh kosong!\n")
         Luas()
 
 def Keliling() :
@@ -238,7 +258,7 @@ def Keliling() :
             Keliling()
         
     else :
-        print("\nHarus di isi! \n")  
+        print("\nTidak boleh kosong!\n")  
         Keliling()  
 
 def HitungAlasdariLuas() :
@@ -272,7 +292,7 @@ def HitungAlasdariLuas() :
             HitungAlasdariLuas()
 
     else :
-        print("\nKeduanya harus di isi!\n")
+        print("\nKeduanya tidak boleh kosong!\n")
         HitungAlasdariLuas()
 
 def HitungTinggidariLuas() :
@@ -306,7 +326,7 @@ def HitungTinggidariLuas() :
             HitungTinggidariLuas()
     
     else :
-        print("\nKeduanya harus di isi!\n")
+        print("\nTidak boleh kosong!\n")
         HitungTinggidariLuas()
 
 def HitungSisidariKeliling() :
@@ -334,7 +354,7 @@ def UlangSisidariKeliling() :
     print("test")
 
 def SisiSegitigasamaSisi() :
-    inputKeliling = input("\nMasukan Keliling : ")
+    inputKeliling = input("\nMasukan keliling : ")
 
     if inputKeliling  != "" :
         
@@ -356,7 +376,7 @@ def SisiSegitigasamaSisi() :
             SisiSegitigasamaSisi()
     
     else :
-        print("\nKeliling harus di isi!\n")
+        print("\nKeliling tidak boleh kosong!\n")
         SisiSegitigasamaSisi()
 
 def SisiSegitigasamaKaki() :
@@ -377,14 +397,14 @@ def SisiSegitigasamaKaki() :
             print("\nHarus melilih salah satu yang ada di atas!\n")
             SisiSegitigasamaKaki()
     else :
-        print("\nHarus di isi!\n")
+        print("\nTidak boleh kosong!\n")
         SisiSegitigasamaKaki()
 
 def SisiSegitigaSembarang() :
     print("test")
 
 def SisiSama() :
-    inputKeliling = input("\nMasukan Keliling : ")
+    inputKeliling = input("\nMasukan keliling : ")
     inputSisi = input("Masukan 1 Sisi yang berbeda : ")
 
     if inputKeliling  != "" and inputSisi  != "" :
@@ -414,11 +434,99 @@ def SisiSama() :
             SisiSama()
     
     else :
-        print("\nKeduanya harus di isi!\n")
+        print("\nKeduanya tidak boleh kosong!\n")
         SisiSama()
 
 def SisiBeda() :
-    print("test")
+    pilih = input("""
+    1. Menghitung dengan memasukan salah satu dari sisi yang sama? : satu
+    2. Menghitung dengan memasukan dua sisi yang sama? : dua
+    """)
+
+    if pilih  != "" :
+        
+        if pilih.casefold() == "satu" or pilih == "1" :
+            salah = True
+
+            while salah :
+                inputKeliling = input("\nMasukan keliling : ")
+                inputSisi = input("Masukan salah satu dari sisi yang sama : ")
+
+                if inputKeliling  != "" and inputSisi  != "" :
+                    
+                    if inputKeliling.isdigit() and inputSisi.isdigit() :
+                        keliling = int(inputKeliling)
+                        sisi = int(inputSisi)
+
+                        if keliling  != 0 and sisi  != 0 :
+                            
+                            if keliling  > sisi :
+                                beda = keliling - sisi * 2
+                                print(f"Sisi yang berbeda = keliling - sisi sama kaki * 2\nSisi = {keliling} - {sisi} * 2")
+                                print(f"Sisinya adalah = {beda}")
+                                salah = False
+                                UlangSisidariKeliling()
+
+                            else :
+                                print("\nKeliling harus lebih besar dari sisi!\n")
+                                salah = True
+
+                        else :
+                            print("\nKeduanya tidak boleh sama dengan 0!\n")
+                            salah = True
+                    
+                    else :
+                        print("\nKeduanya harus menggunakan bilangan bulat!\n")
+                        salah = True
+
+                else :
+                    print("\nKeduanya tidak boleh kosong!\n")
+                    salah = True    
+        
+        elif pilih.casefold() == "dua" or pilih == "2" :
+            salah = True
+
+            while salah :
+                inputKeliling = input("\nMasukan keliling : ")
+                inputSisi = input("Masukan total dari kedua sisi yang sama : ")
+
+                if inputKeliling  != "" and inputSisi  != "" :
+                    
+                    if inputKeliling.isdigit() and inputSisi.isdigit() :
+                        keliling = int(inputKeliling)
+                        sisi = int(inputSisi)
+
+                        if keliling  != 0 and sisi  != 0 :
+                            
+                            if keliling  > sisi :
+                                beda = keliling - sisi
+                                print(f"Sisi yang berbeda = keliling - sisi\nSisi = {keliling} - {sisi}")
+                                print(f"Sisinya adalah = {beda}")
+                                salah = False
+                                UlangSisidariKeliling()
+                            
+                            else :
+                                print("\nKeliling harus lebih besar dari sisi!\n")
+                                salah = True
+                        
+                        else :
+                            print("\nKeduanya tidak boleh sama dengan 0!\n")
+                            salah = True
+                    
+                    else :
+                        print("\nKeduanya harus menggunakan bilangan bulat!\n")
+                        salah = True
+
+                else :
+                    print("\nKeduanya tidak boleh kosong!\n")
+                    salah = True
+
+        else :
+            print("\nHarus memilih salah satu yang ada di Atas\n")
+            SisiBeda()
+    else :
+        print("\nTidak boleh kosong!\n")
+        SisiBeda()
 
 def SisiPanjang() :
     print("test")
