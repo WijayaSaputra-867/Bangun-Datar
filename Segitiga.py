@@ -193,6 +193,7 @@ def PilihSegitiga() :
         PilihSegitiga()
 
 def Segitiga() :
+    print("----------Segitiga----------")
     pilih = input("""Menghitung luas dan keliling segitiga
     1. Luas | 2. Keliling
     """)
@@ -537,4 +538,3 @@ def SisiPendek() :
 def SisiSedang() :
     print("test")
 
-Segitiga()
