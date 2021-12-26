@@ -384,7 +384,38 @@ def SisiSegitigaSembarang() :
     print("test")
 
 def SisiSama() :
-    print("test")
+    inputKeliling = input("\nMasukan Keliling : ")
+    inputSisi = input("Masukan 1 Sisi yang berbeda : ")
+
+    if inputKeliling  != "" and inputSisi  != "" :
+        
+        if inputKeliling.isdigit() and inputSisi.isdigit() :
+            keliling = int(inputKeliling)
+            sisi = int(inputSisi)
+
+            if keliling  != 0 and sisi  != 0 :
+                
+                if keliling  > sisi :
+                    kaki = (keliling - sisi) / 2
+                    print(f"Sisi segitiga sama kaki = (keliling - sisi yang berbeda) / 2\nSisi = ({keliling} - {sisi}) / 2\n")
+                    print(f"Sisi = {kaki}")
+                    UlangSisidariKeliling()
+
+                else :
+                    print("\nKeliling harus lebih besar dari sisi yang berbeda!\n")
+                    SisiSama()
+            
+            else :
+                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                SisiSama()
+        
+        else :
+            print("\nKeduanya harus menggunakan bilangan bulat!\n")
+            SisiSama()
+    
+    else :
+        print("\nKeduanya harus di isi!\n")
+        SisiSama()
 
 def SisiBeda() :
     print("test")
