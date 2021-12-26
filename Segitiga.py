@@ -193,7 +193,7 @@ def PilihSegitiga() :
         PilihSegitiga()
 
 def Segitiga() :
-    print("----------Segitiga----------")
+    print(10*"-"+"Segitiga"+"-"*10)
     pilih = input("""Menghitung luas dan keliling segitiga
     1. Luas | 2. Keliling
     """)
