@@ -29,4 +29,27 @@ def Menu() :
         print("\nTidak boleh kosong\n")
         Menu()
 
+def Keluar() :
+    keluar = input("""Apakah anda mau keluar dari aplikasi ini?
+    1. Ya | 2. Tidak
+    """)
+
+    if keluar  != "" :
+        
+        if keluar.casefold() == "ya"  or keluar == 1 :
+            print("\nTerima Kasih ;-)\n")
+            exit()
+
+        elif keluar.casefold() == "tidak"  or keluar == "2" :
+            print("\nKembali ke menu utama\n")
+            Menu()
+        
+        else :
+            print("\nHarus Memilih salah satu dari di atas!\n")
+            Keluar()
+    
+    else :
+        print("\nTidak boleh kosong!\n")
+        Keluar()
+
 Menu()
