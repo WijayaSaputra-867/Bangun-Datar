@@ -82,89 +82,101 @@ def HitungKelilingSegitiga() :
     segitiga = PilihSegitiga()
 
     if segitiga == "sisi" :
-        inputSisi = input("Masukan 3 sisi yang sama : ")
+        salah = True
 
-        if inputSisi != '' :
-            
-            if inputSisi.isdigit() :
-                sisi = int(inputSisi)
+        while salah:
+            inputSisi = input("Masukan 3 sisi yang sama : ")
+
+            if inputSisi != '' :
                 
-                if sisi  != 0 :
-                    keliling = sisi * 3
-                    print(f"Keliling = sisi + sisi + sisi\nKeliling = {sisi} + {sisi} + {sisi}")
-                    print(f"Kelilingnya adalah = {keliling}")
-                    UlangKeliling()
+                if inputSisi.isdigit() :
+                    sisi = int(inputSisi)
+                    
+                    if sisi  != 0 :
+                        keliling = sisi * 3
+                        print(f"Keliling = sisi + sisi + sisi\nKeliling = {sisi} + {sisi} + {sisi}")
+                        print(f"Kelilingnya adalah = {keliling}")
+                        salah = False
+                        UlangKeliling()
 
+                    else :
+                        print("\nSisi tidak boleh sam dengan 0!\n")
+                        salah = True
+                
                 else :
-                    print("\nSisi tidak boleh sam dengan 0!\n")
-                    HitungKelilingSegitiga()
+                    print("\nSisi harus menggunakan bilangan bulat!\n")
+                    salah = True
             
             else :
-                print("\nSisi harus menggunakan bilangan bulat!\n")
-                HitungKelilingSegitiga()
-        
-        else :
-            print("\nSisinya tidak boleh kosong!\n")
-            HitungKelilingSegitiga()
+                print("\nSisinya tidak boleh kosong!\n")
+                salah = True
 
     elif segitiga == "kaki" :
-        inputSisi = input("Masukan 2 sisi  yang sama : ")
-        inputBeda = input("Masukan 1 sisi yang berbeda : ")
+        salah = True
 
-        if inputSisi != '' and inputBeda != '' :
-            
-            if inputSisi.isdigit() & inputBeda.isdigit() :
-                sisi = int(inputSisi)
-                beda = int(inputBeda)
+        while salah:
+            inputSisi = input("Masukan 2 sisi  yang sama : ")
+            inputBeda = input("Masukan 1 sisi yang berbeda : ")
+
+            if inputSisi != '' and inputBeda != '' :
                 
-                if sisi  != 0 & beda != 0 :
-                    keliling = (sisi * 2) + beda
-                    print(f"Keliling = sisi + sisi + sisi\nKeliling = {sisi} + {sisi} + {beda}")
-                    print(f"Kelilingnya adalah = {keliling}")
-                    UlangKeliling()
+                if inputSisi.isdigit() & inputBeda.isdigit() :
+                    sisi = int(inputSisi)
+                    beda = int(inputBeda)
+                    
+                    if sisi  != 0 & beda != 0 :
+                        keliling = (sisi * 2) + beda
+                        print(f"Keliling = sisi + sisi + sisi\nKeliling = {sisi} + {sisi} + {beda}")
+                        print(f"Kelilingnya adalah = {keliling}")
+                        salah = False
+                        UlangKeliling()
 
+                    else :
+                        print("\nKedua sisinya tidak boleh sama dengan 0!\n")
+                        salah = True
+                
                 else :
-                    print("\nKedua sisinya tidak boleh sama dengan 0!\n")
-                    HitungKelilingSegitiga()
+                    print("\nKedua sisinya harus menggunakan bilangan bulat!\n")
+                    salah = True
             
             else :
-                print("\nKedua sisinya harus menggunakan bilangan bulat!\n")
-                HitungKelilingSegitiga()
-        
-        else :
-            print("\nKedua sisinya tidak boleh kosong!\n")
-            HitungKelilingSegitiga()
+                print("\nKedua sisinya tidak boleh kosong!\n")
+                salah = True
 
     elif segitiga == "sembarang" :
-        inputSatu = input("Masukan sisi yang pertama :")
-        inputDua = input("Masukan sisi yang kedua : ")
-        inputTiga = input("Masukan sisi yang ketiga :")
+        salah = True
+
+        while salah :
+            inputSatu = input("Masukan sisi yang pertama :")
+            inputDua = input("Masukan sisi yang kedua : ")
+            inputTiga = input("Masukan sisi yang ketiga :")
 
 
-        if inputSatu != '' and inputDua != '' and inputTiga != '' :
-            
-            if inputSatu.isdigit() & inputDua.isdigit() & inputTiga.isdigit():
-                satu = int(inputSatu)
-                dua = int(inputDua)
-                tiga = int(inputTiga)
+            if inputSatu != '' and inputDua != '' and inputTiga != '' :
                 
-                if satu  != 0 & dua != 0 & tiga != 0:
-                    keliling = satu + dua + tiga
-                    print(f"Keliling = sisi + sisi + sisi\nKeliling = {satu} + {dua} + {tiga}")
-                    print(f"Kelilingnya adalah = {keliling}")
-                    UlangKeliling()
+                if inputSatu.isdigit() & inputDua.isdigit() & inputTiga.isdigit():
+                    satu = int(inputSatu)
+                    dua = int(inputDua)
+                    tiga = int(inputTiga)
+                    
+                    if satu  != 0 & dua != 0 & tiga != 0:
+                        keliling = satu + dua + tiga
+                        print(f"Keliling = sisi + sisi + sisi\nKeliling = {satu} + {dua} + {tiga}")
+                        print(f"Kelilingnya adalah = {keliling}")
+                        salah = False
+                        UlangKeliling()
 
+                    else :
+                        print("\nKetiga sisinya tidak boleh sama dengan 0!\n")
+                        salah = True
+                
                 else :
-                    print("\nKetiga sisinya tidak boleh sama dengan 0!\n")
-                    HitungKelilingSegitiga()
+                    print("\nKetiga sisinya harus menggunakan bilangan bulat!\n")
+                    salah = True
             
             else :
-                print("\nKetiga sisinya harus menggunakan bilangan bulat!\n")
-                HitungKelilingSegitiga()
-        
-        else :
-            print("\nKetiga sisinya tidak boleh kosong!\n")
-            HitungKelilingSegitiga()        
+                print("\nKetiga sisinya tidak boleh kosong!\n")
+                salah = True
 
 def PilihSegitiga() :
     pilih = input("""Pilih segitiga
