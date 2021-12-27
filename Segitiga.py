@@ -1,3 +1,5 @@
+from Menu import Menu
+
 def UlangLuas() :
     ulang = input("""Apakah anda mau menghitung ulang lagi?
     1. Ya | 2. Tidak
@@ -10,8 +12,8 @@ def UlangLuas() :
             HitungLuasSegitiga()
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
-            print("\nTerima kasih :-)\n")
-            exit()
+            print("\nKembali ke menu utama\n")
+            Menu()
 
         elif ulang == "keliling" or ulang == "3" :
             HitungKelilingSegitiga()
@@ -36,8 +38,8 @@ def UlangKeliling() :
             HitungKelilingSegitiga()
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
-            print("\nTerima kasih :-)\n")
-            exit()
+            print("\nKembali ke menu utama\n")
+            Menu()
 
         elif ulang == "luas" or ulang == "3" :
             HitungLuasSegitiga()
@@ -414,7 +416,11 @@ def SisiSegitigasamaKaki() :
         SisiSegitigasamaKaki()
 
 def SisiSegitigaSembarang() :
-    print("test")
+    input("""
+    1. Menghitung sisi yang terpanjang? : panjang
+    2. Menghitung sisi yang sedang? : sedang
+    3. Menghitung sisi yang terpendek? : pendek
+    """)
 
 def SisiSama() :
     inputKeliling = input("\nMasukan keliling : ")
@@ -452,8 +458,8 @@ def SisiSama() :
 
 def SisiBeda() :
     pilih = input("""
-    1. Menghitung dengan memasukan salah satu dari sisi yang sama? : satu
-    2. Menghitung dengan memasukan dua sisi yang sama? : dua
+    1. Menghitung dengan memasukan keliling dan salah satu dari sisi yang sama? : satu
+    2. Menghitung dengan memasukan keliling dan dua sisi yang sama? : dua
     """)
 
     if pilih  != "" :

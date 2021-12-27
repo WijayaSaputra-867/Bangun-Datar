@@ -1,3 +1,5 @@
+from Menu import Menu
+
 def UlangLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi? 
     1. ya | 2. tidak
@@ -15,8 +17,8 @@ def UlangLuas(panjang, lebar) :
         HitungLuasPersegiPanjang()
 
     elif ulang.casefold() == "tidak" or ulang == "2" :
-        print("\nTerima kasih :-)\n")
-        exit()
+        print("\nKembali ke menu utama\n")
+        Menu()
 
     elif ulang.casefold() == "sama" or ulang == "3" :
         HitungKelilingdariLuas(panjang, lebar)
@@ -63,8 +65,8 @@ def UlangKeliling(panjang, lebar) :
         HitungKelilingPersegiPanjang()
 
     elif ulang.casefold() == "tidak" or ulang == "2" :
-        print("\nTerima kasih :-)\n")
-        exit()
+        print("\nKembali ke menu utama\n")
+        Menu()
 
     elif ulang.casefold() == "sama" or ulang == "3" :
         HitungLuasdariKeliling(panjang, lebar)
@@ -308,8 +310,8 @@ def UlangLebardariLuas(panjang, lebar) :
         HitungLebardariLuas()
 
     elif ulang.casefold() == "tidak" or ulang == "2" :
-        print("\nTerima kasih :-)\n")
-        exit()
+        print("\nKembali ke menu utama\n")
+        Menu()
 
     elif ulang.casefold() == "sama" or ulang == "3" :
         HitungKelilingdariLuas(panjang, lebar)
@@ -356,8 +358,8 @@ def UlangPanjangdariLuas(panjang, lebar) :
         HitungPanjangDariLuas()
 
     elif ulang.casefold() == "tidak" or ulang == "2" :
-        print("\nTerima kasih :-)\n")
-        exit()
+        print("\nKembali ke menu utama\n")
+        Menu()
 
     elif ulang.casefold() == "sama" or ulang == "3" :
         HitungKelilingdariLuas(panjang, lebar)
@@ -404,8 +406,8 @@ def UlangPanjangdariKeliling(panjang, lebar) :
         HitungPanjangdariKeliling()
 
     elif ulang.casefold() == "tidak" or ulang == "2" :
-        print("\nTerima kasih :-)\n")
-        exit()
+        print("\nKembali ke menu utama\n")
+        Menu()
 
     elif ulang.casefold() == "sama" or ulang == "3" :
         HitungLuasdariKeliling(panjang, lebar)
@@ -452,8 +454,8 @@ def UlangLebardariKeliling(panjang , lebar) :
         HitungLebardariKeliling()
 
     elif ulang.casefold() == "tidak" or ulang == "2" :
-        print("\nTerima kasih :-)\n")
-        exit()
+        print("\nKembali ke menu utama\n")
+        Menu()
 
     elif ulang.casefold() == "sama" or ulang == "3" :
         HitungLuasdariKeliling(panjang, lebar)
@@ -602,5 +604,3 @@ def KelilingtanpaLebar(panjang) :
     else :
         print("\nHarus menggunakan bilangan bulat!\n")
         LuastanpaLebar(panjang)
-
-
