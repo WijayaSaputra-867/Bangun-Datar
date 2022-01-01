@@ -1,5 +1,3 @@
-from Menu import Menu
-
 def UlangLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi? 
     1. ya | 2. tidak
@@ -20,7 +18,8 @@ def UlangLuas(panjang, lebar) :
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         elif ulang.casefold() == "sama" or ulang == "3" :
             HitungKelilingdariLuas(panjang, lebar)
@@ -74,7 +73,8 @@ def UlangKeliling(panjang, lebar) :
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         elif ulang.casefold() == "sama" or ulang == "3" :
             HitungLuasdariKeliling(panjang, lebar)
@@ -128,7 +128,36 @@ def HitungLuasPersegiPanjang() :
 
                 else :
                     print("\nPanjang harus Lebih besar dari lebar!\n")
-                    HitungLuasPersegiPanjang()
+                    salah = True
+
+                    while salah :
+                        pilih = input("""
+                        1. Memasukan ulang? : ulang
+                        2. Mengubah panjang? : panjang
+                        3. Mengubah lebar : lebar
+                        """)
+
+                        if pilih  != "" :
+                            
+                            if pilih.casefold() == "ulang"  or pilih == "1" :
+                                salah = False
+                                HitungLuasPersegiPanjang()
+
+                            elif pilih.casefold() == "panjang"  or pilih == "2" :
+                                salah = False
+                                LuastanpaPanjang(lebar)
+
+                            elif pilih.casefold() == "lebar" or pilih == "3" :
+                                salah = False
+                                LuastanpaLebar(panjang)
+                            
+                            else :
+                                print("\nHarus memilih salah satu yang ada di atas!\n")
+                                salah = True
+                        
+                        else :
+                            print("\nTidak boleh kosong!\n")
+                            salah = True
             
             else :
                 print("\nKeduanya tidak boleh sama dengan 0!\n")
@@ -162,7 +191,36 @@ def HitungKelilingPersegiPanjang() :
 
                 else :
                     print("\nPanjang harus Lebih besar dari lebar!\n")
-                    HitungKelilingPersegiPanjang()
+                    salah = True
+
+                    while salah :
+                        pilih = input("""
+                        1. Memasukan ulang? : ulang
+                        2. Mengubah panjang? : panjang
+                        3. Mengubah lebar? : lebar
+                        """)
+
+                        if pilih  != "" :
+                            
+                            if pilih.casefold() == "ulang"  or pilih == "1" :
+                                salah = False
+                                HitungKelilingPersegiPanjang()
+
+                            elif pilih.casefold() == "panjang"  or pilih == "2" :
+                                salah = False
+                                KelilingtanpaPanjang(lebar)  
+
+                            elif pilih.casefold() == "lebar"  or pilih == "3" :
+                                salah = False
+                                KelilingtanpaLebar(panjang)
+
+                            else :
+                                print("\nHarus memilih salah satu yang ada di atas!\n")
+                                salah = True
+
+                        else :
+                            print("\nTidak boleh kosong!\n")
+                            salah = True                              
             else :
                 print("\nKeduanya tidak boleh sama dengan 0!\n")
                 HitungKelilingPersegiPanjang()
@@ -332,9 +390,10 @@ def PersegiPanjang() :
         elif Pilih.casefold() == "keliling" or Pilih == "2" :
             Keliling()
 
-        elif Pilih.casefold() == "Menu"  or Pilih == "3" :
+        elif Pilih.casefold() == "main"  or Pilih == "3" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         else :
             print("\nHarus memilih salah satu yanga da di atas!\n")
@@ -424,7 +483,8 @@ def UlangLebardariLuas(panjang, lebar) :
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         elif ulang.casefold() == "sama" or ulang == "3" :
             HitungKelilingdariLuas(panjang, lebar)
@@ -478,7 +538,8 @@ def UlangPanjangdariLuas(panjang, lebar) :
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         elif ulang.casefold() == "sama" or ulang == "3" :
             HitungKelilingdariLuas(panjang, lebar)
@@ -532,7 +593,8 @@ def UlangPanjangdariKeliling(panjang, lebar) :
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         elif ulang.casefold() == "sama" or ulang == "3" :
             HitungLuasdariKeliling(panjang, lebar)
@@ -585,7 +647,8 @@ def UlangLebardariKeliling(panjang , lebar) :
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         elif ulang.casefold() == "sama" or ulang == "3" :
             HitungLuasdariKeliling(panjang, lebar)

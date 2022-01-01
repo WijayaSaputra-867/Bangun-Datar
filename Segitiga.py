@@ -1,5 +1,3 @@
-from Menu import Menu
-
 def UlangLuas() :
     ulang = input("""Apakah anda mau menghitung ulang lagi?
     1. Ya | 2. Tidak
@@ -13,7 +11,8 @@ def UlangLuas() :
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         elif ulang == "keliling" or ulang == "3" :
             HitungKelilingSegitiga()
@@ -39,7 +38,8 @@ def UlangKeliling() :
 
         elif ulang.casefold() == "tidak" or ulang == "2" :
             print("\nKembali ke menu utama\n")
-            Menu()
+            from Menu import Main
+            Main()
 
         elif ulang == "luas" or ulang == "3" :
             HitungLuasSegitiga()
