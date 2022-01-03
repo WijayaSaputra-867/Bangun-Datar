@@ -2,6 +2,9 @@ def UlangLuas() :
     ulang = input("""Apakah anda mau menghitung ulang lagi?
     1. Ya | 2. Tidak
     3. Menghitung keliling dengan sisi : keliling
+    4. Menghitung tinggi dengan luas dan alas : tinggi
+    5. Menghitung alas dengan luas dan tinggi : alas
+    6. Menghitung sisi segitiga dengan keliling : sisi
     """)
 
     if ulang  != "" :
@@ -14,8 +17,17 @@ def UlangLuas() :
             from Menu import Main
             Main()
 
-        elif ulang == "keliling" or ulang == "3" :
+        elif ulang.casefold() == "keliling" or ulang == "3" :
             HitungKelilingSegitiga()
+
+        elif ulang.casefold() == "tinggi" or ulang == "4" :
+            HitungTinggidariLuas()
+
+        elif ulang.casefold() == "alas" or ulang == "5" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "sisi" or ulang == "6" :
+            HitungSisidariKeliling()
 
         else :
             print("\nHarus memilih salah satu yang ada di atas!\n")
@@ -29,6 +41,9 @@ def UlangKeliling() :
     ulang = input("""Apakah anda mau menghitung ulang lagi?
     1. Ya | 2. Tidak
     3. Menghitung luas dengan alas dan tinggi : luas
+    4. Menghitung tinggi dengan luas dan alas : tinggi
+    5. Menghitung alas dengan luas dan tingii : alas
+    6. Menghitung sisi segitiga dengan keliling : sisi
     """)
 
     if ulang  != "" :
@@ -41,8 +56,17 @@ def UlangKeliling() :
             from Menu import Main
             Main()
 
-        elif ulang == "luas" or ulang == "3" :
+        elif ulang.casefold() == "luas" or ulang == "3" :
             HitungLuasSegitiga()
+
+        elif ulang.casefold() == "tinggi" or ulang == "4" :
+            HitungTinggidariLuas()
+
+        elif ulang.casefold() == "alas" or ulang == "5" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "sisi" or ulang == "6" :
+            HitungSisidariKeliling()
 
         else :
             print("\nHarus memilih salah satu yang ada di atas!\n")
@@ -58,7 +82,7 @@ def HitungLuasSegitiga() :
 
     if inputAlas != '' and inputTinggi != '' :
         
-        if inputAlas.isdigit() & inputTinggi.isdigit() :
+        if inputAlas.isdigit() and inputTinggi.isdigit() :
             alas = int(inputAlas)
             tinggi = int(inputTinggi)
 
@@ -95,9 +119,8 @@ def HitungKelilingSegitiga() :
                     sisi = int(inputSisi)
                     
                     if sisi  != 0 :
-                        keliling = sisi * 3
                         print(f"Keliling = sisi + sisi + sisi\nKeliling = {sisi} + {sisi} + {sisi}")
-                        print(f"Kelilingnya adalah = {keliling}")
+                        print(f"Kelilingnya adalah = {sisi * 3}")
                         salah = False
                         UlangKeliling()
 
@@ -122,14 +145,13 @@ def HitungKelilingSegitiga() :
 
             if inputSisi != '' and inputBeda != '' :
                 
-                if inputSisi.isdigit() & inputBeda.isdigit() :
+                if inputSisi.isdigit() and inputBeda.isdigit() :
                     sisi = int(inputSisi)
                     beda = int(inputBeda)
                     
-                    if sisi  != 0 & beda != 0 :
-                        keliling = (sisi * 2) + beda
+                    if sisi  != 0 and beda != 0 :
                         print(f"Keliling = sisi + sisi + sisi\nKeliling = {sisi} + {sisi} + {beda}")
-                        print(f"Kelilingnya adalah = {keliling}")
+                        print(f"Kelilingnya adalah = {(sisi * 2) + beda}")
                         salah = False
                         UlangKeliling()
 
@@ -156,15 +178,14 @@ def HitungKelilingSegitiga() :
 
             if inputSatu != '' and inputDua != '' and inputTiga != '' :
                 
-                if inputSatu.isdigit() & inputDua.isdigit() & inputTiga.isdigit():
+                if inputSatu.isdigit() and inputDua.isdigit() and inputTiga.isdigit():
                     satu = int(inputSatu)
                     dua = int(inputDua)
                     tiga = int(inputTiga)
                     
-                    if satu  != 0 & dua != 0 & tiga != 0:
-                        keliling = satu + dua + tiga
+                    if satu  != 0 and dua != 0 and tiga != 0 :
                         print(f"Keliling = sisi + sisi + sisi\nKeliling = {satu} + {dua} + {tiga}")
-                        print(f"Kelilingnya adalah = {keliling}")
+                        print(f"Kelilingnya adalah = {satu + dua + tiga}")
                         salah = False
                         UlangKeliling()
 
@@ -179,6 +200,9 @@ def HitungKelilingSegitiga() :
             else :
                 print("\nKetiga sisinya tidak boleh kosong!\n")
                 salah = True
+
+    else :
+        PilihSegitiga()
 
 def PilihSegitiga() :
     pilih = input("""Pilih segitiga
@@ -282,11 +306,11 @@ def HitungAlasdariLuas() :
 
     if inputLuas != "" and inputTinggi != "" :
 
-        if inputLuas.isdigit() & inputTinggi.isdigit() :
+        if inputLuas.isdigit() and inputTinggi.isdigit() :
             luas = int(inputLuas) 
             tinggi = int(inputTinggi)
 
-            if luas != 0 & tinggi != 0 :
+            if luas != 0 and tinggi != 0 :
                 
                 if luas > tinggi :
                     alas = luas / tinggi * 2
@@ -360,13 +384,121 @@ def HitungSisidariKeliling() :
         PilihSegitiga()
 
 def UlangAlasdariLuas() :
-    print("test")
+    ulang = input("""Apakah anda mau menghitung ulang lagi?
+    1. Ya
+    2. Tidak
+    3. Menghitung luas segitiga dengan alas dan tinggi yang baru? : luas
+    4. Menghitung keliling segitiga? : keliling
+    5. Menghitung tinggi dengan luas dan alas yang baru? : tinggi
+    6. Menghitung sisi dengan keliling? : sisi
+    """)
+
+    if ulang != "" :
+        
+        if ulang.casefold() == "ya" or ulang  == "1" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "tidak" or ulang == "2" :
+            from Menu import Main
+            Main()
+        
+        elif ulang.casefold() == "luas" or ulang == "3" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "keliling" or ulang == "4" :
+            HitungKelilingSegitiga()
+
+        elif ulang.casefold() == "tinggi" or ulang == "5" :
+            HitungTinggidariLuas()
+
+        elif ulang.casefold() == "sisi" or ulang == "6" :
+            HitungSisidariKeliling()
+
+        else :
+            print("\nHarus memilih salah satu yang ada di atas!\n")
+            UlangAlasdariLuas()
+
+    else :
+        print("\nTidak boleh kosong!\n")
+        UlangAlasdariLuas()                
 
 def UlangTinggidariLuas() :
-    print("test")
+    ulang = input("""Apakah anda mau menghitung ulang lagi?
+    1. Ya
+    2. Tidak
+    3. Menghitung luas segitiga dengan alas dan tinggi yang baru? : luas
+    4. Menghitung keliling segitiga? : keliling
+    5. Menghitung alas dengan luas dan tinggi yang baru? : alas
+    6. Menghitung sisi dengan keliling? : sisi
+    """)
+
+    if ulang != "" :
+        
+        if ulang.casefold() == "ya" or ulang  == "1" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "tidak" or ulang == "2" :
+            from Menu import Main
+            Main()
+        
+        elif ulang.casefold() == "luas" or ulang == "3" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "keliling" or ulang == "4" :
+            HitungKelilingSegitiga()
+
+        elif ulang.casefold() == "alas" or ulang == "5" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "sisi" or ulang == "6" :
+            HitungSisidariKeliling()
+
+        else :
+            print("\nHarus memilih salah satu yang ada di atas!\n")
+            UlangTinggidariLuas()
+
+    else :
+        print("\nTidak boleh kosong!\n")
+        UlangTinggidariLuas() 
 
 def UlangSisidariKeliling() :
-    print("test")
+    ulang = input("""Apakah anda mau menghitung ulang lagi?
+    1. Ya
+    2. Tidak
+    3. Menghitung luas segitiga dengan alas dan tinggi yang baru? : luas
+    4. Menghitung keliling segitiga? : keliling
+    5. Menghitung tinggi dengan luas dan alas yang baru? : tinggi
+    6. Menghitung alas dengan luas dan tinggi yang baru? : alas
+    """)
+
+    if ulang != "" :
+        
+        if ulang.casefold() == "ya" or ulang  == "1" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "tidak" or ulang == "2" :
+            from Menu import Main
+            Main()
+        
+        elif ulang.casefold() == "luas" or ulang == "3" :
+            HitungAlasdariLuas()
+
+        elif ulang.casefold() == "keliling" or ulang == "4" :
+            HitungKelilingSegitiga()
+
+        elif ulang.casefold() == "tinggi" or ulang == "5" :
+            HitungTinggidariLuas()
+
+        elif ulang.casefold() == "alas" or ulang == "6" :
+            HitungAlasdariLuas()
+
+        else :
+            print("\nHarus memilih salah satu yang ada di atas!\n")
+            UlangSisidariKeliling()
+
+    else :
+        print("\nTidak boleh kosong!\n")
+        UlangSisidariKeliling() 
 
 def SisiSegitigasamaSisi() :
     inputKeliling = input("\nMasukan keliling : ")
@@ -377,9 +509,8 @@ def SisiSegitigasamaSisi() :
             keliling = int(inputKeliling)
 
             if keliling  != 0 :
-                sisi = keliling / 3
                 print(f"Sisi segitiga sama sisi = keliling / 3\nSisi = {keliling} / 3")
-                print(f"Sisinya adalah = {sisi}")
+                print(f"Sisinya adalah = {keliling / 3}")
                 UlangSisidariKeliling()
 
             else :
@@ -416,7 +547,7 @@ def SisiSegitigasamaKaki() :
         SisiSegitigasamaKaki()
 
 def SisiSegitigaSembarang() :
-    input("""
+    pilih = input("""
     1. Menghitung sisi yang terpanjang? : panjang
     2. Menghitung sisi yang sedang? : sedang
     3. Menghitung sisi yang terpendek? : pendek
@@ -435,9 +566,8 @@ def SisiSama() :
             if keliling  != 0 and sisi  != 0 :
                 
                 if keliling  > sisi :
-                    kaki = (keliling - sisi) / 2
                     print(f"Sisi segitiga sama kaki = (keliling - sisi yang berbeda) / 2\nSisi = ({keliling} - {sisi}) / 2\n")
-                    print(f"Sisi = {kaki}")
+                    print(f"Sisi = {(keliling - sisi) / 2}")
                     UlangSisidariKeliling()
 
                 else :
@@ -480,9 +610,8 @@ def SisiBeda() :
                         if keliling  != 0 and sisi  != 0 :
                             
                             if keliling  > sisi :
-                                beda = keliling - sisi * 2
                                 print(f"Sisi yang berbeda = keliling - sisi sama kaki * 2\nSisi = {keliling} - {sisi} * 2")
-                                print(f"Sisinya adalah = {beda}")
+                                print(f"Sisinya adalah = {keliling - sisi * 2}")
                                 salah = False
                                 UlangSisidariKeliling()
 
@@ -518,9 +647,8 @@ def SisiBeda() :
                         if keliling  != 0 and sisi  != 0 :
                             
                             if keliling  > sisi :
-                                beda = keliling - sisi
                                 print(f"Sisi yang berbeda = keliling - sisi\nSisi = {keliling} - {sisi}")
-                                print(f"Sisinya adalah = {beda}")
+                                print(f"Sisinya adalah = {keliling - sisi}")
                                 salah = False
                                 UlangSisidariKeliling()
                             
