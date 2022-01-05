@@ -553,6 +553,25 @@ def SisiSegitigaSembarang() :
     3. Menghitung sisi yang terpendek? : pendek
     """)
 
+    if pilih != "" :
+        
+        if pilih.casefold() == "panjang"  or pilih == "1" :
+            SisiPanjang()
+
+        elif pilih.casefold() == "sedang" or pilih == "2" :
+            SisiSedang()
+            
+        elif pilih.casefold() == "pendek" or pilih == "3" :
+            SisiPendek()
+
+        else :
+            print("\nHarus memilih salah satu yang ada di atas!\n")
+            SisiSegitigaSembarang()
+
+    else :
+        print("\nTidak boleh kosong!\n")
+        SisiSegitigaSembarang()
+
 def SisiSama() :
     inputKeliling = input("\nMasukan keliling : ")
     inputSisi = input("Masukan 1 Sisi yang berbeda : ")
@@ -676,11 +695,210 @@ def SisiBeda() :
         SisiBeda()
 
 def SisiPanjang() :
-    print("test")
+    inputKeliling = input("\nMasukan keliling : ")
+    inputPendek = input("Masukan sisi yang terpendek : ")
+    inputSedang = input("Masukan sisi yang sedang : ")
+
+    if inputKeliling != "" and inputPendek != "" and inputSedang != "" :
+       
+        if inputKeliling.isdigit() and inputPendek.isdigit() and inputSedang.isdigit() :
+            keliling = int(inputKeliling)
+            pendek = int(inputPendek)
+            sedang = input(inputSedang)
+
+            if keliling != 0 and pendek != 0 and sedang != 0 :
+                salah = True
+                
+                while salah:
+                    
+                    if keliling > pendek and keliling > sedang :
+
+                        if sedang > pendek :
+                            print(f"Sisi yang terpanjang = keliling - (pendek + sedang)\nSisi = {keliling} - ({pendek} + {sedang})")
+                            print(f"Sisinya adalah = {keliling - (pendek + sedang)}")
+                            salah = False
+                            UlangSisidariKeliling()
+
+                        else :
+                            print(f"Sisi yang sedang harus lebih besar daripada sisi yang pendek = {pendek} dan harus kurang dari keliling = {keliling}")
+                            inputSedang = input("\nMasukan sisi yang sedang : ")
+                            salah = True
+                            salah1 = True
+
+                            while salah1 :
+
+                                if inputSedang != "" :
+                                    
+                                    if inputSedang.isdigit() :
+                                        sedang = int(inputSedang)
+
+                                        if sedang != 0 :
+                                            salah1 = False
+                                        
+                                        else :
+                                            print("\nTidak boleh sama dengan 0!\n")
+                                            salah1 = True
+                                    
+                                    else :
+                                        print("\nHarus menggunakan bilangan bulat!\n")
+                                        salah1 = True
+                                
+                                else :
+                                    print("\nTidak boleh kosong!\n")
+                                    salah1 = True
+
+                    else :
+                        print("\nKeliling harus lebiih besar dari sisi yang pendek dan sisi yang sedang!\n")
+                        salah = False
+                        SisiPanjang()
+
+            else :
+                print("\nKetiganya tidak boleh sama dengan 0!\n")
+                SisiPanjang()
+
+        else :
+            print("\nKetiganya harus menggunakan bilangan bulat!\n")
+            SisiPanjang()
+
+    else :
+        print("\nKetiganya tidak boleh sama dengan 0!\n")
+        SisiPanjang()
 
 def SisiPendek() :
-    print("test")
+    inputKeliling = input("\nMasukan keliling : ")
+    inputPanjang = input("Masukan sisi yang terpanjang : ")
+    inputSedang = input("Masukan sisi yang sedang : ")
+
+    if inputKeliling != "" and inputPanjang != "" and inputSedang != "" :
+        
+        if inputKeliling.isdigit() and inputPanjang.isdigit() and inputSedang.isdigit() :
+            keliling = int(inputKeliling)
+            panjang = int(inputPanjang)
+            sedang = int(inputSedang)
+
+            if keliling != 0 and panjang != 0 and sedang != 0 :
+                salah = True
+
+                while salah:
+                    
+                    if keliling > panjang and keliling > sedang :
+                        
+                        if panjang > sedang :
+                            print(f"Sisi yang terpendek = keliling - (panjang + sedang)\nSisi = {keliling} - ({panjang} + {sedang})")
+                            print(f"Sisi = {keliling - (panjang + sedang)}")
+                            salah = False
+                            UlangSisidariKeliling()
+                        
+                        else :
+                            print(f"\nSisi yang sedang harus lebih kecil daripada sisi yang panjang = {panjang} dan keliling = {keliling}\n")
+                            inputSedang = input("\nMasukan sisi yang sedang : ")
+                            salah = True
+                            salah1 = True
+
+                            while salah1 :
+
+                                if inputSedang != "" :
+                                    
+                                    if inputSedang.isdigit() :
+                                        sedang = int(inputSedang)
+
+                                        if sedang != 0 :
+                                            salah1 = False
+                                        
+                                        else :
+                                            print("\nTidak boleh sama dengan 0!\n")
+                                            salah1 = True
+                                    
+                                    else :
+                                        print("\nHarus menggunakan bilangan bulat!\n")
+                                        salah1 = True
+                                
+                                else :
+                                    print("\nTidak boleh kosong!\n")
+                                    salah1 = True
+
+                    else :
+                        print("\nKeliling harus lebih besar dari sisi yang panjang dan sisi yang sedang!\n")
+                        SisiPendek()
+
+            else :
+                print("\nKetiganya Tidak boleh sama dengan 0!\n")
+                SisiPendek()
+
+        else :
+            print("\nKetiganya harus menggunakan bilangan bulat!\n")
+            SisiPendek()
+
+    else :
+        print("\nKetiganya tidak boleh kosong!\n")
+        SisiPendek()
 
 def SisiSedang() :
-    print("test")
+    inputKeliling = input("\nMasukan keliling : ")
+    inputPanjang = input("Masukan sisi yang terpanjang : ")
+    inputPendek = input("Masukan sisi yang sedang : ")
+
+    if inputKeliling != "" and inputPanjang != "" and inputPendek != "" :
+        
+        if inputKeliling.isdigit() and inputPanjang.isdigit() and inputPendek.isdigit() :
+            keliling = int(inputKeliling)
+            panjang = int(inputPanjang)
+            pendek = int(inputPendek)
+
+            if keliling != 0 and panjang != 0 and pendek != 0 :
+                salah = True
+
+                while salah:
+                    
+                    if keliling > panjang and keliling > pendek :
+                        
+                        if panjang > pendek :
+                            print(f"Sisi yang terpendek = keliling - (panjang + pendek)\nSisi = {keliling} - ({panjang} + {pendek})")
+                            print(f"Sisi = {keliling - (panjang + pendek)}")
+                            salah = False
+                            UlangSisidariKeliling()
+                        
+                        else :
+                            print(f"\nSisi yang pendek harus lebih kecil daripada sisi yang panjang = {panjang} dan keliling = {keliling}\n")
+                            inputPendek = input("\nMasukan sisi yang pendek : ")
+                            salah = True
+                            salah1 = True
+
+                            while salah1 :
+
+                                if inputPendek != "" :
+                                    
+                                    if inputPendek.isdigit() :
+                                        pendek = int(inputPendek)
+
+                                        if pendek != 0 :
+                                            salah1 = False
+                                        
+                                        else :
+                                            print("\nTidak boleh sama dengan 0!\n")
+                                            salah1 = True
+                                    
+                                    else :
+                                        print("\nHarus menggunakan bilangan bulat!\n")
+                                        salah1 = True
+                                
+                                else :
+                                    print("\nTidak boleh kosong!\n")
+                                    salah1 = True
+
+                    else :
+                        print("\nKeliling harus lebih besar dari sisi yang panjang dan sisi yang pendek!\n")
+                        SisiSedang()
+
+            else :
+                print("\nKetiganya Tidak boleh sama dengan 0!\n")
+                SisiSedang()
+
+        else :
+            print("\nKetiganya harus menggunakan bilangan bulat!\n")
+            SisiSedang()
+
+    else :
+        print("\nKetiganya tidak boleh kosong!\n")
+        SisiSedang()
 

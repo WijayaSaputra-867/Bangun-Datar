@@ -1,6 +1,7 @@
 def UlangLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi? 
-    1. ya | 2. tidak
+    1. ya 
+    2. Tidak
     3. Menghitung keliling dari panjang dan lebar yang sama? : sama
     4. Menghitung keliling dari panjang dan lebar yang baru? : baru 
     5. Menghitung panjang dengan luas dan lebar yang baru? : panjang
@@ -55,7 +56,8 @@ def UlangLuas(panjang, lebar) :
        
 def UlangKeliling(panjang, lebar) : 
     ulang = input("""\nApakah anda mau menghitung ulang lagi? 
-    1. ya | 2. tidak
+    1. ya
+    2. Tidak
     3. Menghitung luas dari panjang dan lebar yang sama? : sama
     4. Menghitung luas dari panjang dan lebar yang baru? : baru 
     5. Menghitung panjang dari keliling dan lebar yang baru? : panjang
@@ -160,7 +162,7 @@ def HitungLuasPersegiPanjang() :
                             salah = True
             
             else :
-                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                print("\nKeduanya Tidak boleh sama dengan 0!\n")
                 HitungLuasPersegiPanjang()
 
         else :
@@ -168,7 +170,7 @@ def HitungLuasPersegiPanjang() :
             HitungLuasPersegiPanjang()
 
     else :
-        print("\nKeduanya tidak boleh kosong!\n")
+        print("\nKeduanya Tidak boleh kosong!\n")
         HitungLuasPersegiPanjang()
 
 def HitungKelilingPersegiPanjang() :
@@ -222,7 +224,7 @@ def HitungKelilingPersegiPanjang() :
                             print("\nTidak boleh kosong!\n")
                             salah = True                              
             else :
-                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                print("\nKeduanya Tidak boleh sama dengan 0!\n")
                 HitungKelilingPersegiPanjang()
 
         else :
@@ -230,7 +232,7 @@ def HitungKelilingPersegiPanjang() :
             HitungKelilingPersegiPanjang()
 
     else :
-        print("\nKeduanya tidak boleh kosong!\n")
+        print("\nKeduanya Tidak boleh kosong!\n")
         HitungKelilingPersegiPanjang()
 
 def HitungKelilingdariLuas(panjang, lebar) :
@@ -267,7 +269,7 @@ def HitungPanjangDariLuas() :
                     print("\nLuas harus lebih besar dari lebar!\n")
                     HitungPanjangDariLuas()
             else :
-                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                print("\nKeduanya Tidak boleh sama dengan 0!\n")
                 HitungPanjangDariLuas()
 
         else :
@@ -275,7 +277,7 @@ def HitungPanjangDariLuas() :
             HitungPanjangDariLuas()
 
     else :
-        print("\nKeduanya tidak boleh kosong!\n")
+        print("\nKeduanya Tidak boleh kosong!\n")
         HitungPanjangDariLuas()
 
 def HitungLebardariLuas() :
@@ -300,7 +302,7 @@ def HitungLebardariLuas() :
                     print("\nLuas harus lebih besar dari panjang!\n")
                     HitungLebardariLuas()
             else :
-                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                print("\nKeduanya Tidak boleh sama dengan 0!\n")
                 HitungLebardariLuas()
 
         else :
@@ -308,7 +310,7 @@ def HitungLebardariLuas() :
             HitungLebardariLuas()
 
     else :
-        print("\nKeduanya tidak boleh kosong!\n")
+        print("\nKeduanya Tidak boleh kosong!\n")
         HitungLebardariLuas()
 
 def HitungPanjangdariKeliling() :
@@ -334,7 +336,7 @@ def HitungPanjangdariKeliling() :
                     HitungPanjangdariKeliling()
 
             else :
-                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                print("\nKeduanya Tidak boleh sama dengan 0!\n")
                 HitungPanjangdariKeliling()
 
         else :
@@ -342,7 +344,7 @@ def HitungPanjangdariKeliling() :
             HitungPanjangdariKeliling()
 
     else :
-        print("\nKeduanya tidak boleh kosong!\n")
+        print("\nKeduanya Tidak boleh kosong!\n")
         HitungPanjangdariKeliling()
 
 def HitungLebardariKeliling() :
@@ -367,7 +369,7 @@ def HitungLebardariKeliling() :
                     print("\nKeliling harus lebih besar dari lebar!\n")
                     HitungLebardariKeliling()
             else :
-                print("\nKeduanya tidak boleh sama dengan 0!\n")
+                print("\nKeduanya Tidak boleh sama dengan 0!\n")
                 HitungLebardariKeliling()
 
         else : 
@@ -375,7 +377,7 @@ def HitungLebardariKeliling() :
             HitungLebardariKeliling()
 
     else :
-        print("\nKeduanya tidak boleh kosong!\n")
+        print("\nKeduanya Tidak boleh kosong!\n")
         HitungLebardariKeliling()
 
 def PersegiPanjang() :
@@ -465,7 +467,8 @@ def Keliling() :
 
 def UlangLebardariLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
-    1. Ya | 2. tidak
+    1. Ya 
+    2. Tidak
     3. Menghitung keliling dari panjang dan lebar yang sama? : sama
     4. Menghitung keliling dari panjang dan lebar yang baru? : baru
     5. Menghitung luas dari panjang dan lebar yang berbeda? : beda
@@ -520,7 +523,8 @@ def UlangLebardariLuas(panjang, lebar) :
     
 def UlangPanjangdariLuas(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
-    1. Ya | 2. tidak
+    1. Ya
+    2. Tidak
     3. Menghitung keliling dengan panjang dan lebar yang sama? : sama
     4. Menghitung keliling dengan panjang dan lebar yang baru? : baru
     5. Menghitung luas dengan panjang dan lebar yang berbeda? : beda
@@ -575,7 +579,8 @@ def UlangPanjangdariLuas(panjang, lebar) :
 
 def UlangPanjangdariKeliling(panjang, lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
-    1. Ya | 2. Tidak
+    1. Ya
+    2. Tidak
     3. Menghitung luas dengan panjang dan lebar yang sama? : sama
     4. Menghitung luas dengan panjang dan lebar yang baru? : baru
     5. Menghitung keliling dengan panjang dan lebar yang berbeda? : beda
@@ -629,7 +634,8 @@ def UlangPanjangdariKeliling(panjang, lebar) :
     
 def UlangLebardariKeliling(panjang , lebar) :
     ulang = input("""\nApakah anda mau menghitung ulang lagi?
-    1. Ya | 2. Tidak
+    1. Ya
+    2. Tidak
     3. Menghitung luas dengan panjang dan lebar yang sama? : sama
     4. Menghitung luas dengan panjang dan lebar yang baru? : baru
     5. Menghitung keliling dengan panjang dan lebar yang berbeda? : beda
